@@ -1,0 +1,48 @@
+/* Container for the switch */
+.toggle {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Label styling (optional) */
+  .toggleLabel {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  /* Switch container */
+  .switch {
+    width: 50px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: #c7c7c7;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: #c7c7c7 solid 2px
+  }
+  
+  /* When the switch is turned on */
+  .switch.on {
+    background-color: #000000; /* Green for "on" */
+  }
+  
+  /* Toggle thumb */
+  .toggleThumb {
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    transition: right 0.3s ease;
+    
+  }
+  
+  /* When the switch is on, move the thumb */
+  .switch.on .toggleThumb {
+    right: 26px; /* Adjusted position for "on" state */
+    background-color: #c7c7c7;
+  }

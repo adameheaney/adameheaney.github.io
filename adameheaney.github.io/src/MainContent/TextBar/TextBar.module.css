@@ -1,0 +1,74 @@
+/* Container Styles */
+.scrollingtextcon {
+    background-color: #000000;
+    font-family: "Gotham";
+    font-style: italic;
+    font-size: 50px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    width: 100%;
+    border-top: solid #c7c7c7 3px;
+    border-bottom: solid #c7c7c7 3px;
+    box-sizing: border-box;
+}
+
+.scrollingtextcon > p {
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+/* Animation for Scrolling Left */
+.scrollingtextleft {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 20s linear infinite;
+}
+
+/* Animation for Scrolling Right */
+.scrollingtextright {
+    display: inline-block;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    animation: scroll-right 20s linear infinite;
+    width: auto;
+}
+
+/* Static Text with Smooth Transition */
+.scrollingtextright.paused {
+    display: inline-block;
+    white-space: nowrap;
+    animation-play-state: paused;
+    -o-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+.scrollingtextleft.paused {
+    display: inline-block;
+    white-space: nowrap;
+    animation-play-state: paused;
+    -o-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+/* Keyframes for Scrolling Left */
+@keyframes scroll-left {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Keyframes for Scrolling Right */
+@keyframes scroll-right {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
