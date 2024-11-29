@@ -30,21 +30,17 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 				</p>
 			</div>
 			<div className={styles.footer}>
-				<ul className= {styles.icons}>
-					<li>
+				<div className= {styles.icons}>
 						<a href="https://github.com/adameheaney">
-							<FontAwesomeIcon icon={faGithub} style={{textDecoration:'underline'}}/> Github 
+							<FontAwesomeIcon icon={faGithub} style={{textDecoration:'underline'}}/> Github&nbsp;  
 						</a>
-					</li>
-					<li>
 						<a href="https://mail.google.com/mail/u/0/?fs=1&to=adamheaney@brandeis.edu&tf=cm">
 							<FontAwesomeIcon icon={faEnvelope} style={{textDecoration:'underline'}}/>	Email 
 						</a>
-					</li>
-				</ul>
-				<ul className= {styles.copyright}>
-					<li>&copy; Adam Heaney all rights reserved</li>
-				</ul>
+				</div>
+				<div className= {styles.copyright}>
+					<p>&copy; Adam Heaney all rights reserved</p>
+				</div>
 			</div>	
 		</div>
     )

@@ -1,0 +1,31 @@
+.sectionOne {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.whoAmI {
+    padding: 10px;
+    width: 65%;
+}
+
+.funStuff {
+    display: flex;
+    flex-direction: column;
+    border-left: #c7c7c7 solid 3px;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 35%;
+}
+
+.facts {
+    height: fit-content;
+}
+
+.interests {
+
+}
+
+h2 {
+    margin: 0 0 5px 0;
+}
