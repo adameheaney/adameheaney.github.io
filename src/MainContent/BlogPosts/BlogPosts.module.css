@@ -1,0 +1,16 @@
+.sectionThree {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+}
+
+.postPreview {
+    padding-bottom: 30px;
+    border-top: 3px #c7c7c7 solid;
+}
+
+.readMore {
+    color: white;
+    text-decoration: underline rgb(158, 198, 158);;
+}

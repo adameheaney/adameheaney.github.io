@@ -9,6 +9,7 @@
     box-sizing: border-box;
     flex: 1;
     border: 3px #c7c7c7 solid;
+    border-top: none;
     background-color: black;
 }
 
@@ -16,3 +17,4 @@
     font-family: 'Gotham';
     text-decoration: underline rgb(158, 198, 158);
 }
+

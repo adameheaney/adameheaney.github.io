@@ -1,0 +1,25 @@
+.blogpost {
+    border-bottom: solid 2px #efefef;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 23%;
+    width: calc(100% - 23%);
+    height: 100%;
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    flex: 1;
+    border: 3px #c7c7c7 solid;
+    background-color: black;
+    color: white;
+}
+
+.link {
+    color: rgb(158, 198, 158);
+    text-decoration: underline white;
+}
+
+.home {
+    width: fit-content;
+}
