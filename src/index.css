@@ -55,3 +55,7 @@ a {
   text-decoration: underline rgb(158, 198, 158);;
 }
 
+h1 {
+  font-size: 32px;
+  margin: 10px 0 10px 0;
+}

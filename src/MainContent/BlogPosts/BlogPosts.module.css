@@ -1,13 +1,28 @@
 .sectionThree {
     display: flex;
     flex-direction: column;
-    padding: 10px;
     color: white;
+}
+
+.header {
+    padding: 10px 10px 20px 10px;
+    border-bottom: 3px #c7c7c7 solid;
+    align-items: center;
+    text-align: center;
+}
+
+.previewsContainer {
+    padding: 10px;
 }
 
 .postPreview {
     padding-bottom: 30px;
     border-top: 3px #c7c7c7 solid;
+}
+
+.postPreview:first-child{
+    padding-bottom: 30px;
+    border-top: none;
 }
 
 .readMore {
