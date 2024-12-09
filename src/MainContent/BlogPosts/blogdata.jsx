@@ -180,7 +180,7 @@ const blogdata = [
                     can definitely be improved. There's a couple reasons why I went all out redesigning and recoding the entire website: number one being that I didn't
                     really like the look and feel of it; it felt too bland, boring, and 'templatey'. It had no character. Number two is that it didn't showcase my skills enough!
                     This past year I spent a lot of time with React, and if my own website wasn't even made using it, then who would I be but a hypocrite! So yeah, I'm
-                    very happy with my redesign and I hope you would be too! (I'll probably link to the old one here eventually so you can see the changes) 
+                    very happy with my redesign and I hope you would be too! (<a href='https://adameheaney.github.io/adameheaney.github.io-old'>Here</a> is a link to the old website). 
                     <br/><br/>
                     Now let's talk about the year, starting with second semester of sophomore year. Second semester was a little rough for me, which is probably partially
                     the reason why I didn't post anything. Personal problems compounded on top of each other, causing me to lose focus, leading to my worst semester academically

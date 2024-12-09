@@ -33,14 +33,15 @@
 }
 
 .inner {
+	display: flex;
     -moz-flex-grow: 1;
     -webkit-flex-grow: 1;
     -ms-flex-grow: 1;
     flex-grow: 1;
     align-items: center;
-    padding-top: 6em;
     /* overflow: hidden; */
     font-size: 10px;
+	padding-bottom: 10em;
 }
 
 .footer {
@@ -51,10 +52,20 @@
     margin-bottom: 20%;
 }
 
-a:hover {
-    /* color: #a8a8a8; */
-    font-weight: bold;
-    /* text-decoration: none; */
+.tabsList {
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+
+.tab {
+	color: #c7c7c7;
+	font-size: 18px;
+
+}
+
+.tab:hover {
+	cursor: pointer;
 }
 
 .link {

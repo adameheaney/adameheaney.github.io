@@ -6,8 +6,8 @@ import styles from './Projects.module.css'
 export default function Projects({animationOn}) {
     return (
         <>
-            <TextBar left={false} animationOn={animationOn} text='PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS&nbsp;'/>
-            <div className={styles.sectionTwo}>
+            <TextBar id='projects' left={false} animationOn={animationOn} text='PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS&nbsp;'/>
+            <div  className={styles.sectionTwo}>
                 <div className={styles.row}>
                     <ProjectBlock 
                         title={'Laser Defender'} 

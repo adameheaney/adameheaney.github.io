@@ -12,8 +12,8 @@ export default function BlogPosts({animationOn}) {
 
     return (
         <>
-            <TextBar left={true} animationOn={animationOn} text='BLOGPOSTS BLOGPOSTS BLOGPOSTS BLOGPOSTS BLOGPOSTS BLOGPOSTS  &nbsp;'/>
-            <section className={styles.sectionThree}>
+            <TextBar id='blog-posts' left={true} animationOn={animationOn} text='BLOGPOSTS BLOGPOSTS BLOGPOSTS BLOGPOSTS BLOGPOSTS BLOGPOSTS  &nbsp;'/>
+            <section  className={styles.sectionThree}>
                 <div className={styles.header}>
                     <h1>Welcome to my blog!</h1>
                     <p style={{margin:'0 20% 0 20%'}}>

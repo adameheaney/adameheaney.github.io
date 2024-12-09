@@ -9,7 +9,23 @@ import { TbSpiralOff } from "react-icons/tb";
 
 
 export default function Sidebar({setAnimationOn, animationOn}) {
-    return (
+    
+	const scrollToSection = (id, offset = 0) => {
+		const targetElement = document.getElementById(id);
+		if (targetElement) {
+			const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+    		const offsetPosition = elementPosition + offset;
+		  	window.scrollTo({
+				behavior: "smooth",
+				top: offsetPosition,
+		  	});
+		} else {
+		  console.error(`Element with id "${id}" not found.`);
+		}
+	  };
+	
+	
+	return (
         <div className={styles.sidebar}>
 			<Toggle 
 				label= <TbSpiralOff size={'25px'} style={{color:'white', left:'0px'}}/>
@@ -18,6 +34,22 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 				styling = {{marginTop: '15px'}}
 			/>
 			<div className={styles.inner}>
+				<ul className={styles.tabsList}>
+					<li className={styles.tab} onClick={() => scrollToSection('about-me')}>
+						About Me
+					</li>
+					<li className={styles.tab} onClick={() => scrollToSection('projects', 1)}>
+						Projects
+					</li>
+					<li className={styles.tab} >
+						Experiences
+					</li>
+					<li className={styles.tab} onClick={() => scrollToSection('blog-posts')}>
+						Blog Posts
+					</li>
+				</ul>
+			</div>
+			{/* <div className={styles.inner}>
 				<a href="#" className="image avatar"><img src="images/adamheaney.png" alt="" /></a>
 				<p style={{fontSize:'18px'}}>
 					👋 Hey there! I'm&nbsp; 
@@ -40,8 +72,8 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 				</div>
 				<div className= {styles.copyright}>
 					<p>&copy; Adam Heaney all rights reserved</p>
-				</div>
-			</div>	
+				</div> 
+			</div>	*/}
 		</div>
     )
 }
