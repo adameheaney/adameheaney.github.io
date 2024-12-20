@@ -27,12 +27,12 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 	
 	return (
         <div className={styles.sidebar}>
-			<p>Animation Off</p>
+			<p style={{height:"10px"}}>Animation Off</p>
 			<Toggle 
 				label= <TbSpiralOff size={'25px'} style={{color:'white', left:'0px'}}/>
 				onToggle={setAnimationOn}
 				isOn={animationOn}
-				styling = {{marginTop: '15px'}}
+				
 			/>
 			{/* <div className={styles.inner}>
 				<ul className={styles.tabsList}>
