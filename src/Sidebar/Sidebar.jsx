@@ -27,13 +27,14 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 	
 	return (
         <div className={styles.sidebar}>
+			<p>Animation Off</p>
 			<Toggle 
 				label= <TbSpiralOff size={'25px'} style={{color:'white', left:'0px'}}/>
 				onToggle={setAnimationOn}
 				isOn={animationOn}
 				styling = {{marginTop: '15px'}}
 			/>
-			<div className={styles.inner}>
+			{/* <div className={styles.inner}>
 				<ul className={styles.tabsList}>
 					<li className={styles.tab} onClick={() => scrollToSection('about-me')}>
 						About Me
@@ -48,8 +49,8 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 						Blog Posts
 					</li>
 				</ul>
-			</div>
-			{/* <div className={styles.inner}>
+			</div> */}
+			<div className={styles.inner}>
 				<a href="#" className="image avatar"><img src="images/adamheaney.png" alt="" /></a>
 				<p style={{fontSize:'18px'}}>
 					👋 Hey there! I'm&nbsp; 
@@ -73,7 +74,7 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 				<div className= {styles.copyright}>
 					<p>&copy; Adam Heaney all rights reserved</p>
 				</div> 
-			</div>	*/}
+			</div>
 		</div>
     )
 }
