@@ -12,7 +12,7 @@ export default function Toggle({ isOn, onToggle, label, styling}) {
         onClick={onToggle}
       >
         <div className={styles.toggleThumb}></div>
-        <p style={{fontSize:'10px', marginLeft:'auto', paddingRight:'6px', textAlign:'center', color:'#c7c7c7', userSelect:'none'}}>Animation On</p>
+        <p style={{fontSize:'10px', marginLeft:'auto', paddingRight:'6px', textAlign:'center', color:'#c7c7c7', userSelect:'none'}}>Marquee On</p>
       </div>
     </div>
   );

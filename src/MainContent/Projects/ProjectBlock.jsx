@@ -25,7 +25,7 @@ export default function ProjectBlock({title, date, imageUrl, page}) {
                     </Link>
                 </div>
                <div className={styles.arrowContainer}>
-                    <FaArrowRightLong className={styles.arrow} size={50}/>
+                    <FaArrowRightLong className={styles.arrow}/>
                </div>
             </div>
         </>

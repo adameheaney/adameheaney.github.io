@@ -8,7 +8,7 @@ import blogdata from './MainContent/BlogPosts/blogdata'
 import BlogPostPage from './MainContent/BlogPosts/BlogPostPage'
 
 function App() {
-  const [animationOn, setAnimationOn] = useState(true)
+  const [animationOn, setAnimationOn] = useState(false)
 
   function setAnimation() {
       setAnimationOn(!animationOn)

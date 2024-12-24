@@ -19,7 +19,7 @@ export default function Hello() {
 
     return (
         <div id= 'welcome' className = {`${styles.helloContainer} section`}>
-            <p className={isInactive ? styles.inactive : ''} style={{paddingLeft:'2vh', color:'#575757', alignItems:'center', display:'flex'}}> <BsArrowLeft /> &nbsp;&nbsp;&nbsp;Want animations off?</p>
+            <p className={isInactive ? styles.inactive : ''} style={{paddingLeft:'2vh', color:'#575757', alignItems:'center', display:'flex'}}> <BsArrowLeft /> &nbsp;&nbsp;&nbsp;Want marquee on?</p>
             <p style={{padding:'25vh 10vh 0 10vh'}}>  
                 <span style={{fontFamily:"Gotham", fontSize:'70px', marginBottom:'0'}}> Adam Heaney </span>
             </p>
