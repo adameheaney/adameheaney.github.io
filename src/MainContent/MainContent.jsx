@@ -5,6 +5,8 @@ import Hello from './Hello/Hello'
 
 import styles from './MainContent.module.css'
 import { useState } from "react";
+import Experiences from "./Experiences/Experiences";
+import ContactMe from "./ContactMe/ContactMe";
 
 export default function MainContent({animationOn=true}) {
 
@@ -13,7 +15,9 @@ export default function MainContent({animationOn=true}) {
             <Hello />
             <AboutMe animationOn={animationOn} />
             <Projects animationOn={animationOn} />
+            {/* <Experiences animationOn={animationOn} /> */}
             <BlogPosts animationOn={animationOn} />
+            <ContactMe animationOn={animationOn} />
         </div>
     )
 }

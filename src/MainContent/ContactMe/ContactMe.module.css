@@ -1,0 +1,22 @@
+.ContactMeSection {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;    
+}
+
+.infoContainer {
+    display:flex;
+    flex-direction: row;
+    gap: 10vw;
+    justify-content: center;
+    align-content: center;
+    flex: 1;
+}
+
+.info {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+}

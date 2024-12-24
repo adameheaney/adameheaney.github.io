@@ -3,8 +3,8 @@ import styles from './AboutMe.module.css'
 
 export default function AboutMe({animationOn}) {
     return (
-        <>
-            <TextBar id='about-me' animationOn={animationOn} text='ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME&nbsp;'/>
+        <div className={'section'} id='about-me'>
+            <TextBar animationOn={animationOn} text='ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME&nbsp;'/>
             <section  className={styles.sectionOne}>
                 <div className={styles.whoAmI}>
 					<h2>Who am I?</h2>
@@ -30,10 +30,10 @@ export default function AboutMe({animationOn}) {
                                 <li>
                                     I can name every country (if given a map) 🌏
                                 </li>
-                                <li>
+                                {/* <li>
                                     I love to play videogames here and there. Minecraft, Valorant, and Rocket League are among my favorites. 
                                     Though I used to be a Nintendo kid at heart ❤️
-                                </li>
+                                </li> */}
                             </ul>
                     </div>
                     <div className={styles.interests}>
@@ -55,6 +55,6 @@ export default function AboutMe({animationOn}) {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     )
 }

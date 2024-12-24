@@ -22,11 +22,13 @@
     display: inline-block;
     white-space: nowrap;
     animation: scroll-left 20s linear infinite;
+    user-select: none;
 }
 
 .scrollingtextright {
     display: inline-block;
     white-space: nowrap;
+    user-select: none;
     transform: translateX(-50%);
     animation: scroll-right 20s linear infinite;
     width: auto;

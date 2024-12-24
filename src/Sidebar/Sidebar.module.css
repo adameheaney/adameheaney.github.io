@@ -73,6 +73,12 @@
 	transition: color .2s ease-in-out;
 }
 
+.active {
+	cursor: pointer;
+	color: white;
+	font-weight: 600;
+}
+
 .link {
     color:white;
     text-decoration: underline rgb(158, 198, 158);;

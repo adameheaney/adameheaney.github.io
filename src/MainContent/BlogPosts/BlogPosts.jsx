@@ -11,8 +11,8 @@ export default function BlogPosts({animationOn}) {
     }
 
     return (
-        <>
-            <TextBar id='blog-posts' left={true} animationOn={animationOn} text='BLOGPOSTS BLOGPOSTS BLOGPOSTS BLOGPOSTS BLOGPOSTS BLOGPOSTS  &nbsp;'/>
+        <div className='section' id='blog-posts'>
+            <TextBar left={true} animationOn={animationOn} text='BLOGPOSTS BLOGPOSTS BLOGPOSTS BLOGPOSTS BLOGPOSTS BLOGPOSTS  &nbsp;'/>
             <section  className={styles.sectionThree}>
                 <div className={styles.header}>
                     <h1>Welcome to my blog!</h1>
@@ -37,6 +37,6 @@ export default function BlogPosts({animationOn}) {
                 ))}
                 </div>
             </section>
-        </>
+        </div>
     )
 }

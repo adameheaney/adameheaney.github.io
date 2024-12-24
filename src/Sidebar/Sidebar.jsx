@@ -6,7 +6,8 @@ import { useState, useEffect } from 'react';
 
 export default function Sidebar({setAnimationOn, animationOn}) {
     
-	const [activeTab, setActiveTab] = useState('');
+	const [activeTab, setActiveTab] = useState('w');
+	let lastScrollY = 0;
 
 	const scrollToSection = (id, offset = 0) => {
 		const targetElement = document.getElementById(id);
@@ -20,7 +21,36 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 		} else {
 		  console.error(`Element with id "${id}" not found.`);
 		}
-	  };
+	};
+	
+	const handleScroll = () => {
+		const sections = document.querySelectorAll('.section');
+		let currentSection = activeTab;
+		const currentScrollY = window.scrollY
+
+
+		for (let i = 0; i < sections.length; i++) {
+			let section = sections[i]
+			const rect = section.getBoundingClientRect();
+			const sectionTop = section.offsetTop;
+			const sectionHeight = section.clientHeight;
+
+			if ((currentScrollY > lastScrollY && (rect.top >= 0 && rect.top <= window.innerHeight / 1.5))) {
+				currentSection = section.id;
+			}
+			else if((currentScrollY <= lastScrollY && (window.scrollY >= sectionTop - sectionHeight / 4))) {
+				currentSection = section.id;
+			}
+		}
+		lastScrollY = currentScrollY
+		if(currentSection != 'w')
+			setActiveTab(currentSection);
+	};
+	
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
 	
 	
 	return (
@@ -33,22 +63,22 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 			/>
 			<div className={styles.inner}>
 				<ul className={styles.tabsList}>
-					<li className={styles.tab} onClick={() => scrollToSection('welcome')}>
+					<li className={`${styles.tab} ${activeTab === 'welcome' || activeTab === 'w'? styles.active : ''}`} onClick={() => scrollToSection('welcome')}>
 						Welcome
 					</li>
-					<li className={styles.tab} onClick={() => scrollToSection('about-me')}>
+					<li className={`${styles.tab} ${activeTab === 'about-me' ? styles.active : ''}`} onClick={() => scrollToSection('about-me')}>
 						About Me
 					</li>
-					<li className={styles.tab} onClick={() => scrollToSection('projects', 1)}>
+					<li className={`${styles.tab} ${activeTab === 'projects' ? styles.active : ''}`} onClick={() => scrollToSection('projects', 1)}>
 						Projects
 					</li>
-					<li className={styles.tab} >
+					{/* <li className={styles.tab} onClick={() => scrollToSection('experiences')}>
 						Experiences
-					</li>
-					<li className={styles.tab} onClick={() => scrollToSection('blog-posts')}>
+					</li> */}
+					<li className={`${styles.tab} ${activeTab === 'blog-posts' ? styles.active : ''}`} onClick={() => scrollToSection('blog-posts')}>
 						Blog Posts
 					</li>
-					<li className={styles.tab} onClick={() => scrollToSection('contact-me')}>
+					<li className={`${styles.tab} ${activeTab === 'contact-me' ? styles.active : ''}`} onClick={() => scrollToSection('contact-me')}>
 						Contact Me
 					</li>
 				</ul>
