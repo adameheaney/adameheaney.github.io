@@ -1,15 +1,13 @@
 import styles from './Sidebar.module.css'
-import Adam from '../assets/images/adamsuit.jpg'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import Toggle from '../Components/Toggle/Toggle';
-import { TbSpiralOff } from "react-icons/tb";
 
+import { useState, useEffect } from 'react';
 
 export default function Sidebar({setAnimationOn, animationOn}) {
     
+	const [activeTab, setActiveTab] = useState('');
+
 	const scrollToSection = (id, offset = 0) => {
 		const targetElement = document.getElementById(id);
 		if (targetElement) {
@@ -27,15 +25,17 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 	
 	return (
         <div className={styles.sidebar}>
-			<p style={{height:"10px"}}>Animation Off</p>
 			<Toggle 
-				label= <TbSpiralOff size={'25px'} style={{color:'white', left:'0px'}}/>
+				// label= <TbSpiralOff size={'25px'} style={{color:'white', left:'0px'}}/>
 				onToggle={setAnimationOn}
 				isOn={animationOn}
-				
+				styling={{marginTop:'20px'}}
 			/>
-			{/* <div className={styles.inner}>
+			<div className={styles.inner}>
 				<ul className={styles.tabsList}>
+					<li className={styles.tab} onClick={() => scrollToSection('welcome')}>
+						Welcome
+					</li>
 					<li className={styles.tab} onClick={() => scrollToSection('about-me')}>
 						About Me
 					</li>
@@ -48,9 +48,12 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 					<li className={styles.tab} onClick={() => scrollToSection('blog-posts')}>
 						Blog Posts
 					</li>
+					<li className={styles.tab} onClick={() => scrollToSection('contact-me')}>
+						Contact Me
+					</li>
 				</ul>
-			</div> */}
-			<div className={styles.inner}>
+			</div>
+			{/* <div className={styles.inner}>
 				<a href="#" className="image avatar"><img src="images/adamheaney.png" alt="" /></a>
 				<p style={{fontSize:'18px'}}>
 					👋 Hey there! I'm&nbsp; 
@@ -74,7 +77,7 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 				<div className= {styles.copyright}>
 					<p>&copy; Adam Heaney all rights reserved</p>
 				</div> 
-			</div>
+			</div> */}
 		</div>
     )
 }

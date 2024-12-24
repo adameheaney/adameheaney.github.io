@@ -1,4 +1,4 @@
-import TextBar from "../TextBar/TextBar"
+import TextBar from "../../Components/TextBar/TextBar"
 import ProjectBlock from "./ProjectBlock"
 import styles from './Projects.module.css'
 

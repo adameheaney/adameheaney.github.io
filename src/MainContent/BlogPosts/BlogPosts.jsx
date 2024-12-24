@@ -1,5 +1,5 @@
 import { Link, Route, Routes } from "react-router-dom"
-import TextBar from "../TextBar/TextBar"
+import TextBar from "../../Components/TextBar/TextBar"
 import styles from './BlogPosts.module.css'
 import blogdata from './blogdata'
 

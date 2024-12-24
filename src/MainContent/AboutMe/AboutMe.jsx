@@ -1,4 +1,4 @@
-import TextBar from "../TextBar/TextBar";
+import TextBar from "../../Components/TextBar/TextBar";
 import styles from './AboutMe.module.css'
 
 export default function AboutMe({animationOn}) {

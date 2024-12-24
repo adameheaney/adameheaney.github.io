@@ -1,0 +1,9 @@
+.helloContainer {
+    height: 100vh;
+    border-top: 2px#c7c7c7 solid;
+}
+
+.inactive {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}

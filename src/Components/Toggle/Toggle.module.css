@@ -12,14 +12,17 @@
   
   /* Switch container */
   .switch {
-    width: 50px;
+    width: 100px;
     height: 25px;
     border-radius: 50px;
     background-color: #c7c7c7;
     position: relative;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border: #c7c7c7 solid 2px
+    border: #c7c7c7 solid 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
   
   /* When the switch is turned on */
@@ -35,7 +38,7 @@
     border-radius: 50%;
     position: absolute;
     top: 50%;
-    right: 4px;
+    right: 3px;
     transform: translateY(-50%);
     transition: right 0.3s ease;
     
@@ -43,6 +46,6 @@
   
   /* When the switch is on, move the thumb */
   .switch.on .toggleThumb {
-    right: 26px; /* Adjusted position for "on" state */
+    right: 76px; /* Adjusted position for "on" state */
     background-color: #c7c7c7;
   }
