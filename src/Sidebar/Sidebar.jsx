@@ -75,9 +75,9 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 					{/* <li className={styles.tab} onClick={() => scrollToSection('experiences')}>
 						Experiences
 					</li> */}
-					<li className={`${styles.tab} ${activeTab === 'blog-posts' ? styles.active : ''}`} onClick={() => scrollToSection('blog-posts')}>
+					{/* <li className={`${styles.tab} ${activeTab === 'blog-posts' ? styles.active : ''}`} onClick={() => scrollToSection('blog-posts')}>
 						Blog Posts
-					</li>
+					</li> */}
 					<li className={`${styles.tab} ${activeTab === 'contact-me' ? styles.active : ''}`} onClick={() => scrollToSection('contact-me')}>
 						Contact Me
 					</li>
