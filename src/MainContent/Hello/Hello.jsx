@@ -18,16 +18,16 @@ export default function Hello() {
     }, []);
 
     return (
-        <div id= 'welcome' className = {`${styles.helloContainer} section`}>
-            <p className={isInactive ? styles.inactive : ''} style={{paddingLeft:'2vh', color:'#575757', alignItems:'center', display:'flex'}}> <BsArrowLeft /> &nbsp;&nbsp;&nbsp;Want marquee on?</p>
+        <div id= 'welcome' className = {`${styles.helloContainer} section justify-center text-center sm:text-left`}>
+            {/* <p className={isInactive ? styles.inactive : ''} style={{paddingLeft:'2vh', color:'#575757', alignItems:'center', display:'flex'}}> <BsArrowLeft /> &nbsp;&nbsp;&nbsp;Want marquee on?</p> */}
             <p style={{padding:'25vh 10vh 0 10vh'}}>  
-                <span style={{fontFamily:"Gotham", fontSize:'70px', marginBottom:'0'}}> Adam Heaney </span>
+                <span className='text-[50px] sm:text-[70px]' style={{fontFamily:"Gotham", marginBottom:'0'}}> Adam Heaney </span>
             </p>
             <p style={{fontSize:'20px', color:'#878787', padding:'0 10vh 0 10vh'}}>
                     Software Engineering | Web Development | Computer Science
             </p>
-            <div className={isInactive ? styles.inactive : ''} style={{alignContent:'center', display:'flex', justifyContent:'center', paddingTop:'33vh'}}>
-                <BsArrowDown size={30}/>
+            <div className={isInactive ? styles.inactive : ''} style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', marginTop:'auto', paddingBottom:'10px'}}>
+                <BsArrowDown className={styles.arrowContainer} size={30}/> Scroll
             </div>
         </div>
     )

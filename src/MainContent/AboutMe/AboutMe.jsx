@@ -4,9 +4,11 @@ import styles from './AboutMe.module.css'
 export default function AboutMe({animationOn}) {
     return (
         <div className={'section'} id='about-me'>
-            <TextBar animationOn={animationOn} text='ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME&nbsp;'/>
-            <section  className={styles.sectionOne}>
-                <div className={styles.whoAmI}>
+            <h1>
+                About Me
+            </h1>
+            <section  className='flex flex-col sm:flex-row'>
+                <div className={`${styles.whoAmI} sm:w-[62%]`}>
 					<h2>Who am I?</h2>
                     <p> 
                         Hi, I'm Adam Heaney, a junior at Brandeis University, where I’m pursuing a B.S. in Computer Science with a minor in Business.
@@ -15,7 +17,7 @@ export default function AboutMe({animationOn}) {
                         Looking ahead, I’m focused on my goal of becoming a software engineer. One day, though, I hope to work in cybersecurity.
                     </p>
 				</div>
-                <div className={styles.funStuff}>
+                <div className={`${styles.funStuff} p-[50px] pt-[0px] sm:w-[38%] sm:border-l-white sm:border-l-2 sm:p-[50px]`}>
                     <div className={styles.facts}>
                         <h2>Fun facts</h2>
                         <ul>

@@ -1,28 +1,15 @@
-.sectionOne {
-    display: flex;
-    flex-direction: row;
-}
-
 .whoAmI {
     padding: 50px;
-    width: 65%;
+    text-align: justify;
+    
 }
 
 .funStuff {
     display: flex;
     flex-direction: column;
-    border-left: #c7c7c7 solid 3px;
     box-sizing: border-box;
-    padding: 50px;
-    width: 35%;
-}
-
-.facts {
-    height: fit-content;
-}
-
-.interests {
-
+    text-align: justify;
+    gap: 50px;
 }
 
 h2 {

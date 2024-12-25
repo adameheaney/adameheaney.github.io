@@ -54,22 +54,23 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 	
 	
 	return (
-        <div className={styles.sidebar}>
-			<Toggle 
+        <div className={`${styles.sidebar} h-1/6 w-full sm:w-3/12 top-0 left-0 sm:h-full`}>
+			{/* <Toggle 
 				// label= <TbSpiralOff size={'25px'} style={{color:'white', left:'0px'}}/>
 				onToggle={setAnimationOn}
 				isOn={animationOn}
 				styling={{marginTop:'20px'}}
-			/>
+			/> */}
 			<div className={styles.inner}>
-				<ul className={styles.tabsList}>
-					<li className={`${styles.tab} ${activeTab === 'welcome' || activeTab === 'w'? styles.active : ''}`} onClick={() => scrollToSection('welcome')}>
+				<ul className={`${styles.tabsList} flex flex-row sm:flex-col align-middle justify-center text-center
+							   text-[12px] sm:text-[18px]`}>
+					<li className={`${styles.tab} ${activeTab === 'welcome' || activeTab === 'w'? styles.active : ''} flex items-center`} onClick={() => scrollToSection('welcome')}>
 						Welcome
 					</li>
-					<li className={`${styles.tab} ${activeTab === 'about-me' ? styles.active : ''}`} onClick={() => scrollToSection('about-me')}>
+					<li className={`${styles.tab} ${activeTab === 'about-me' ? styles.active : ''} flex items-center`} onClick={() => scrollToSection('about-me')}>
 						About Me
 					</li>
-					<li className={`${styles.tab} ${activeTab === 'projects' ? styles.active : ''}`} onClick={() => scrollToSection('projects', 1)}>
+					<li className={`${styles.tab} ${activeTab === 'projects' ? styles.active : ''} flex items-center`} onClick={() => scrollToSection('projects', 1)}>
 						Projects
 					</li>
 					{/* <li className={styles.tab} onClick={() => scrollToSection('experiences')}>
@@ -78,36 +79,11 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 					{/* <li className={`${styles.tab} ${activeTab === 'blog-posts' ? styles.active : ''}`} onClick={() => scrollToSection('blog-posts')}>
 						Blog Posts
 					</li> */}
-					<li className={`${styles.tab} ${activeTab === 'contact-me' ? styles.active : ''}`} onClick={() => scrollToSection('contact-me')}>
+					<li className={`${styles.tab} ${activeTab === 'contact-me' ? styles.active : ''} flex items-center`} onClick={() => scrollToSection('contact-me')}>
 						Contact Me
 					</li>
 				</ul>
 			</div>
-			{/* <div className={styles.inner}>
-				<a href="#" className="image avatar"><img src="images/adamheaney.png" alt="" /></a>
-				<p style={{fontSize:'18px'}}>
-					👋 Hey there! I'm&nbsp; 
-					  <a className={styles.link} href="https://www.linkedin.com/in/adam-heaney-9a1085266/">
-					Adam Heaney</a>
-				</p>
-				<img src={Adam} style={{width: '200px', height: 'auto', borderRadius:'20px', border:"solid #c7c7c7 3px"}}></img>
-				<p style={{fontSize:'18px'}}>
-					Welcome to my website!
-				</p>
-			</div>
-			<div className={styles.footer}>
-				<div className= {styles.icons}>
-						<a className={styles.link} href="https://github.com/adameheaney">
-							<FontAwesomeIcon icon={faGithub} style={{textDecoration:'underline'}}/> Github&nbsp;  
-						</a>
-						<a className={styles.link} href="https://mail.google.com/mail/u/0/?fs=1&to=adamheaney@brandeis.edu&tf=cm">
-							<FontAwesomeIcon icon={faEnvelope} style={{textDecoration:'underline'}}/>	Email 
-						</a>
-				</div>
-				<div className= {styles.copyright}>
-					<p>&copy; Adam Heaney all rights reserved</p>
-				</div> 
-			</div> */}
 		</div>
     )
 }

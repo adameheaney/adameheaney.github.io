@@ -11,7 +11,7 @@ import ContactMe from "./ContactMe/ContactMe";
 export default function MainContent({animationOn=true}) {
 
     return (
-        <div className={styles.Container}>
+        <div className={`${styles.Container} w-full sm:w-3/4 sm:ml-[25%] `}>
             <Hello />
             <AboutMe animationOn={animationOn} />
             <Projects animationOn={animationOn} />

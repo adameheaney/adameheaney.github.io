@@ -1,19 +1,13 @@
 .Container {
     display: flex;
     flex-direction: column;
-    margin-left: 23%;
-    /* max-width: 54em; */
-    /* padding: 8em 4em 4em 4em; */
-    width: calc(100% - 23%);
     position: relative;
     box-sizing: border-box;
     flex: 1;
-    border: 3px #c7c7c7 solid;
-    border-top: none;
     background-color: black;
 }
 
 .Container h1, h2, h3, h4, h5, h6 {
     font-family: 'Gotham';
-    text-decoration: underline rgb(158, 198, 158);
+    color: rgb(158, 198, 158);
 }

@@ -6,7 +6,9 @@ import styles from './Projects.module.css'
 export default function Projects({animationOn}) {
     return (
         <div className='section' id='projects' >
-            <TextBar  left={false} animationOn={animationOn} text='PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS&nbsp;'/>
+            <h1>
+                Projects
+            </h1>
             <div className={styles.sectionTwo}>
                 <ProjectBlock 
                     title={'Laser Defender'} 

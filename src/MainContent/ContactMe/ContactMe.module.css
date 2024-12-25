@@ -5,18 +5,15 @@
 }
 
 .infoContainer {
-    display:flex;
-    flex-direction: row;
-    gap: 10vw;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
-    flex: 1;
 }
 
 .info {
     display: flex;
     align-content: center;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
+    gap: 10px;
     font-size: 20px;
 }

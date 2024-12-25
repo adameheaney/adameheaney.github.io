@@ -11,12 +11,12 @@ export default function ProjectBlock({title, date, imageUrl, page}) {
         <>
             <div className={styles.projectContainer}>
                 <div className={styles.blockContainer}>
-                    <a className={styles.projectContent} href={page} >
+                    <a className={styles.projectContent} href={page} target='_blank'>
                         {title} <br/>
                         {date}
                     </a>
                     <div className={`${styles.overlay}`}></div>
-                    <Link to= {page} className={styles.link}>
+                    <Link to= {page} target='_blank' className={styles.link}>
                         <img
                                 className={styles.image}
                                 src={imageUrl}
