@@ -4,7 +4,7 @@
 }
 
 .whoAmI {
-    padding: 10px;
+    padding: 50px;
     width: 65%;
 }
 
@@ -13,7 +13,7 @@
     flex-direction: column;
     border-left: #c7c7c7 solid 3px;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 50px;
     width: 35%;
 }
 

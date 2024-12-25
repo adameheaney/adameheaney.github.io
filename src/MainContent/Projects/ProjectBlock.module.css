@@ -42,7 +42,7 @@
 }
 
 .projectContent {
-    padding: 0 0 0 20px;
+    padding-left: 50px;
     z-index: 3;
     position: absolute;
     font-family: 'Gotham';
