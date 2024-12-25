@@ -16,7 +16,7 @@ export default function MainContent({animationOn=true}) {
             <AboutMe animationOn={animationOn} />
             <Projects animationOn={animationOn} />
             {/* <Experiences animationOn={animationOn} /> */}
-            <BlogPosts animationOn={animationOn} />
+            {/* <BlogPosts animationOn={animationOn} /> */}
             <ContactMe animationOn={animationOn} />
         </div>
     )
