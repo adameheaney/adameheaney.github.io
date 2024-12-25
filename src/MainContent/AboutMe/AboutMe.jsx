@@ -47,7 +47,7 @@ export default function AboutMe({animationOn}) {
                                     Coding side projects (like this website itself) 👨‍💻
                                 </li>
                                 <li>
-                                    Geology 🪨, Geography 🗺️, and Nature 🌱 (I love a good nature walk) 
+                                    Geology 🪨, Geography 🗺️, and Nature 🌱
                                 </li>
                             </ul>
                     </div>
