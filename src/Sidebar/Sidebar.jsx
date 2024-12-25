@@ -38,9 +38,11 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 			if ((currentScrollY > lastScrollY && (rect.top >= 0 && rect.top <= window.innerHeight / 1.5))) {
 				currentSection = section.id;
 			}
-			else if((currentScrollY <= lastScrollY && (window.scrollY >= sectionTop - sectionHeight / 4))) {
+			if((currentScrollY <= lastScrollY && (window.scrollY >= sectionTop - sectionHeight / 4))) {
 				currentSection = section.id;
 			}
+			if(section.id === 'contact-me' && window.scrollY >= document.documentElement.scrollHeight - 1000)
+				currentSection = section.id;
 		}
 		lastScrollY = currentScrollY
 		if(currentSection != 'w')
