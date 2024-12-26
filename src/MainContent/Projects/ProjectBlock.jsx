@@ -10,7 +10,7 @@ export default function ProjectBlock({title, date, imageUrl, page}) {
     return (
         <>
             <div className={styles.projectContainer}>
-                <div className={`${styles.blockContainer} justify-center w-[100%] sm:justify-normal sm:w-[66%]`}>
+                <div className={`${styles.blockContainer} h-[120px] justify-center w-[100%] sm:h-auto sm:justify-normal sm:w-[66%]`}>
                     <a className={`${styles.projectContent} sm:pl-[50px]`} href={page} target='_blank'>
                         {title} <br/>
                         {date}
