@@ -15,9 +15,9 @@
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: black;
 		background-attachment: scroll, scroll;
 		background-position: top left,top left;
+		background-color: black;
 		background-repeat: repeat, no-repeat;
 		background-size: 500%, 100%; 
 		color: rgba(255, 255, 255, .5);

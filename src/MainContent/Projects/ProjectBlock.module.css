@@ -15,7 +15,6 @@
 }
 
 .blockContainer {
-    width: 66%;
     overflow: hidden;
     background-color: black;  
     transition: background-color 0.5s ease;
@@ -26,12 +25,9 @@
 }
 
 .arrowContainer {
-    display: flex;
     flex-direction: row;
     flex: 1;
-    justify-content: end;
     align-items: center;
-    padding-right: 50px;
 }
 
 .arrow {
@@ -42,9 +38,11 @@
 }
 
 .projectContent {
-    padding-left: 50px;
     z-index: 3;
-    position: absolute;
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-decoration: underline rgb(158, 198, 158);    
     transition: opacity .5s ease-in-out 0s;
 
@@ -78,10 +76,9 @@
 }
 
 .image {
-    object-fit: cover;
     position: absolute;
     height: 100%;
-    width: 95%;
+    width: 100%;
     box-sizing: border-box;
 }
 

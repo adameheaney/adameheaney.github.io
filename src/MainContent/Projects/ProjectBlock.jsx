@@ -10,8 +10,8 @@ export default function ProjectBlock({title, date, imageUrl, page}) {
     return (
         <>
             <div className={styles.projectContainer}>
-                <div className={styles.blockContainer}>
-                    <a className={styles.projectContent} href={page} target='_blank'>
+                <div className={`${styles.blockContainer} justify-center w-[100%] sm:justify-normal sm:w-[66%]`}>
+                    <a className={`${styles.projectContent} sm:pl-[50px]`} href={page} target='_blank'>
                         {title} <br/>
                         {date}
                     </a>
@@ -24,7 +24,7 @@ export default function ProjectBlock({title, date, imageUrl, page}) {
                         />
                     </Link>
                 </div>
-               <div className={styles.arrowContainer}>
+               <div className={`${styles.arrowContainer} hidden justify-center p-[10px] sm:pr-[50px] sm:justify-end sm:flex`}>
                     <FaArrowRightLong className={styles.arrow}/>
                </div>
             </div>

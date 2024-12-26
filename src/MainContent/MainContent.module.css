@@ -4,7 +4,6 @@
     position: relative;
     box-sizing: border-box;
     flex: 1;
-    background-color: black;
 }
 
 .Container h1, h2, h3, h4, h5, h6 {

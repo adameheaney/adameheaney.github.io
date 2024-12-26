@@ -3,11 +3,11 @@ import styles from './AboutMe.module.css'
 
 export default function AboutMe({animationOn}) {
     return (
-        <div className={'section'} id='about-me'>
+        <div className={'section bg-black'} id='about-me'>
             <h1>
                 About Me
             </h1>
-            <section  className='flex flex-col sm:flex-row'>
+            <section  className='flex flex-col sm:flex-row animate-fadeIn transition-opacity'>
                 <div className={`${styles.whoAmI} sm:w-[62%]`}>
 					<h2>Who am I?</h2>
                     <p> 
