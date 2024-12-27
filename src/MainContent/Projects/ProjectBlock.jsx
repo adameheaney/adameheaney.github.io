@@ -19,7 +19,7 @@ export default function ProjectBlock({title, date, imageUrl, page, mobile = fals
                     {/* <div className={`${styles.overlay} ${activeProject ? styles.inactive : styles.active}`}></div> */}
                     <Link to= {page} target='_blank' className={styles.link}>
                         <img
-                                className={`${styles.image} ${mobile ? activeProject? styles.active : styles.inactive : ''} border-r-white border-none border-[3px] lg:border-solid`}
+                                className={`${styles.image} ${mobile ? activeProject? styles.active : styles.inactive : ''} delay-200 transition-opacity ease-in duration-500 border-r-white border-none border-[3px] lg:border-solid lg:delay-0`}
                                 src={imageUrl}
                                 alt=""
                         />
