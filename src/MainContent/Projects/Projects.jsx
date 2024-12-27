@@ -84,7 +84,7 @@ export default function Projects({animationOn}) {
                 <ProjectBlock 
                     title={'Personal Website'} 
                     date={'April \'23 - Current'} 
-                    imageUrl={'/assets/images/ProjectThumbnails/adamheaneywebsite.png'}
+                    imageUrl={'/assets/images/ProjectThumbnails/adamheaneywebsiteIcon.png'}
                     page={'https://www.github.com/adameheaney/adameheaney.github.io-react'}
                     activeProject = {activeProject === 2 ? true : false}
                     mobile = {small}
@@ -105,12 +105,12 @@ export default function Projects({animationOn}) {
                     activeProject = {activeProject === 4 ? true : false}
                     mobile = {small}
                 />
-                <ProjectBlock 
+                {/* <ProjectBlock 
                     title={'SKITICK'} 
                     date={'May \'24 - August \'24'} 
                     activeProject = {activeProject === 5 ? true : false}
                     mobile = {small}
-                />
+                /> */}
                 <ProjectBlock 
                     title={'...'} 
                     imageUrl={'/assets/images/ProjectThumbnails/continueIcon.png'}
