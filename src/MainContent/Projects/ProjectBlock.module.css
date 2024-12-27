@@ -1,3 +1,11 @@
+.active {
+    opacity: 1 !important;
+}
+
+.inactive {
+    opacity:0 !important;
+}
+
 .projectContainer {
     width: 100%;
     overflow: hidden;
@@ -7,6 +15,18 @@
     box-sizing: border-box;
     display: flex;
     border-bottom: 3px #c7c7c7 solid;
+}
+
+.projectContainer:hover .readMoreButton {
+    opacity: 1;
+}
+
+.projectContainer:hover .projectTitle {
+    opacity: 0;
+}
+
+.projectContainer:hover .image {
+    opacity: 1;
 }
 
 .projectContainer:last-child {
@@ -24,20 +44,12 @@
     align-items: center;
 }
 
-.arrowContainer {
-    flex-direction: row;
-    flex: 1;
-    align-items: center;
-}
-
-.arrow {
+.projectRightTitle {
     opacity: 0;
-    font-size: 50px;
-    font-weight: 10;
-    transition: opacity 1s ease .1s;
+    transition: opacity 1s ease .4s;
 }
 
-.projectContent {
+.projectTitle {
     z-index: 3;
     /* position: absolute; */
     display: flex;
@@ -56,22 +68,7 @@
     height: 100%;
     background-color: black;
     z-index: 1;
-    transition: height 0.5s ease;
-}
-
-.projectContainer:hover .overlay {
-    height: 0; 
-}
-  
-.projectContainer:hover .image {
-    opacity: 1; 
-}
-
-.projectContainer:hover .projectContent {
-    opacity: 0; 
-}
-
-.projectContainer:hover .arrow {
+    transition: opacity 0.5s ease, height .1s 0.5s;
     opacity: 1; 
 }
 
@@ -80,6 +77,8 @@
     height: 100%;
     width: 100%;
     box-sizing: border-box;
+    transition: opacity 0.5s ease, height .1s 0.5s;
+    opacity: 0; 
 }
 
 .link {
@@ -88,4 +87,42 @@
     height: 100%;
     width: 100%;
     box-sizing: border-box;
+}
+.buttonContainer {
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+.readMoreButton {
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  opacity: 0;
+  transition: opacity .5s ease-in-out .1s;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'urbanist';
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.readMoreButton:hover {
+    font-weight: bold;
+    border: 2px solid #ffffff;
 }

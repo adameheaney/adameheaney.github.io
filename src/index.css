@@ -35,12 +35,6 @@ a {
   text-decoration: underline rgb(158, 198, 158);;
 }
 
-a:hover {
-  /* color: #a8a8a8; */
-  font-weight: bold;
-  /* text-decoration: none; */
-}
-
 h1 {
   @apply text-center border-y-white border-solid border-y-2;
   font-size: 40px;

@@ -56,7 +56,7 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 	
 	
 	return (
-        <div className={`${styles.sidebar} h-1/6 w-full sm:w-3/12 top-0 left-0 sm:h-full`}>
+        <div className={`${styles.sidebar} h-1/6 w-full hidden sm:flex sm:w-3/12 top-0 left-0 sm:h-full`}>
 			{/* <Toggle 
 				// label= <TbSpiralOff size={'25px'} style={{color:'white', left:'0px'}}/>
 				onToggle={setAnimationOn}

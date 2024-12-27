@@ -16,14 +16,13 @@ function App() {
 
   return (
     <>
-      
         <div className={styles.mainContainer}>
           <Sidebar setAnimationOn={setAnimation} animationOn={animationOn}/>
           <Routes>
               <Route path='/' element={<MainContent animationOn={animationOn}/>} />
               {blogdata.map((post) => (
                   <Route path={`/blog/${post.id}`} element={<BlogPostPage id={post.id}/>} key={post.id} />
-              ))}    
+              ))}     
           </Routes>
         </div>
       
