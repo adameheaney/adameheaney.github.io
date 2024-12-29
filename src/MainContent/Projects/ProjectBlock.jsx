@@ -29,7 +29,7 @@ export default function ProjectBlock({title, date, imageUrl, page, mobile = fals
                <div className={`${styles.buttonContainer} ${/*mobile ? activeProject? styles.active : styles.inactive : ''*/''} flex justify-center p-[10px] sm:justify-end lg:flex`}>
                     <p className={`${styles.projectRightTitle} ${mobile ? activeProject ? styles.active : styles.inactive : ''} flex pr-[50px] delay-200 transition-opacity ease-in duration-500 lg:hidden lg:delay-0`}>
                         {title}</p>
-                    <button className={`${styles.readMoreButton} ${mobile ? activeProject ? styles.active : styles.inactive : ''} delay-200 transition-opacity ease-in duration-500 text-[10px] lg:text-[14px] lg:delay-0`}> Read more <MdOutlineKeyboardArrowRight /> </button>
+                    <a href={page} target='_blank' className={`${styles.readMoreButton} ${mobile ? activeProject ? styles.active : styles.inactive : ''} delay-200 transition-opacity ease-in duration-500 text-[10px] lg:text-[14px] lg:delay-0`}> Read more <MdOutlineKeyboardArrowRight /> </a>
                </div>
             </div>
         </>

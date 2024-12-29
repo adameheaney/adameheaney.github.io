@@ -27,7 +27,7 @@ function App() {
                   <Route path={`/blog/${post.id}`} element={<BlogPostPage id={post.id}/>} key={post.id} />
               ))} */}
               {projectdata.map((project, index) => (
-                  <Route path={`/project/${project.title}`} element={project.pageComponent} key={index} />
+                  <Route path={`/project/${project.slug}`} element={project.pageComponent} key={index} />
               ))}  
               <Route path="*" element={<NotFound />} />   
           </Routes>
