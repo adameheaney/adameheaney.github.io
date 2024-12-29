@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <Router>
+      {/* <div className='background'></div> only on light mode */}
       <App />
   </Router>,
 )

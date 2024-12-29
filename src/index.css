@@ -18,9 +18,18 @@
 
 body {
   margin: 0;
-  background-size: cover;
+  /* background-size: cover; */
+  /* background-image: url('./assets/images/background.png'); */
   background-attachment: fixed;
   /* background-color: red; */
+}
+.background {
+  background-image: url('./assets/images/background.png');
+  background-attachment: fixed;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 ul {

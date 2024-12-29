@@ -7,7 +7,7 @@ export default function AboutMe({animationOn}) {
             <h1>
                 About Me
             </h1>
-            <section  className='flex flex-col sm:flex-row animate-fadeIn transition-opacity'>
+            <section  className='flex flex-col sm:flex-row  transition-opacity'>
                 <div className={`${styles.whoAmI} sm:w-[62%]`}>
 					<h2>Who am I?</h2>
                     <p> 
