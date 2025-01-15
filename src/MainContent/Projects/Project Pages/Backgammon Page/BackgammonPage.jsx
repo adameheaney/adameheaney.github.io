@@ -1,8 +1,45 @@
 import ProjectSidebar from '../Sidebar-ProjectPages/ProjectSidebar'
 import styles from './BackgammonPage.module.css'
 
+import {useState, useEffect} from 'react';
+import axios from 'axios';
+import React from 'react';
+
 export default function BackgammonPage() {
     
+    const [gameState, setGameState] = useState('');
+    const [inputValue, setInputValue] = useState('');
+
+    useEffect(() => {
+        axios.get('https://backgammon-adam-992f80c86472.herokuapp.com/state')
+        .then((response) => {
+            setGameState(response.data); 
+        })
+        .catch((error) => {
+            console.error('Error fetching game state:', error);
+        });
+    }, []);
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            setInputValue("");
+            axios.post('https://backgammon-adam-992f80c86472.herokuapp.com/move', inputValue)
+            .then((response) => {
+                axios.get('https://backgammon-adam-992f80c86472.herokuapp.com/state')
+                .then((response) => {
+                    setGameState(response.data); 
+                })
+                .catch((error) => {
+                    console.error('Error fetching game state:', error);
+                });
+                console.log(response)
+            })
+            .catch((error) => {
+                console.error('error making move: ', error);
+            });
+        }
+      };
+
     return (
         <>
             <ProjectSidebar />
@@ -14,7 +51,7 @@ export default function BackgammonPage() {
             </div>
                  <div id='about' className={`${styles.about} section`}>
                     <h1>About</h1>
-                    <p className='p-[50px]'>
+                    <span className='p-[50px]'>
                     <h3>Motivation:</h3> 
                     <span className='leading-normal'>I started this project during my first semester as a sophomore at Brandeis University 
                         after my friend became obsessed with backgammon strategy. He’d been reading up on techniques and putting in 
@@ -35,11 +72,11 @@ export default function BackgammonPage() {
                         learning from my past decisions and identifying areas for improvement. Overall, this project provided me with 
                         a hands-on opportunity to explore object-oriented programming in a way that extended far beyond what 
                         I experienced in class assignments, and I’m grateful for the lessons it taught me. </span>
-                    </p>
+                    </span>
                 </div>
                 <div id='skills' className={`${styles.skills} section`}>
                     <h1>Skills</h1>
-                    <p className='px-[50px] pb-[50px]'>
+                    <span className='px-[50px] pb-[50px]'>
                         <br/><br/><h3>Object-Oriented Programming</h3>
                         <span>
                             As mentioned in the "About" section, this project in large was a great challenge for me in my
@@ -99,10 +136,24 @@ export default function BackgammonPage() {
                             is incredibly important, for maintainability, readability, understandability, etc.
 
                         </span>
-                    </p>
+                    </span>
                 </div>
                 <div id='showcase' className={`${styles.showcase} section`}>
                     <h1>Showcase</h1>
+                    <h2 className='p-[50px]'>
+                        Here is an interactive showcase of the Backgammon game I created. Go ahead and try it out!
+                    </h2>
+                    <textarea className={`${styles.terminal}`} readOnly
+                    value={gameState}>
+                    </textarea>
+                    <input 
+                        className={styles.terminalInput} 
+                        type='text' 
+                        placeholder='Input move here ("roll x y", e.g. 4 0 1)' 
+                        onKeyDown={handleKeyDown}
+                        onChange={(e) => setInputValue(e.target.value)}
+                        value={inputValue}
+                    />
                 </div>
             </div>
         </>

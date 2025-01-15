@@ -71,6 +71,7 @@ export default function Projects({animationOn}) {
                         date={project.date} 
                         imageUrl={project.imageUrl}
                         page={project.page}
+                        slug={project.slug}
                         activeProject = {activeProject === index ? true : false}
                         mobile = {small}
                         key = {index}
