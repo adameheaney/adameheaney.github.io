@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from './App.module.css'
-import { Routes, Route } from 'react-router-dom' 
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Sidebar from './Sidebar/Sidebar'
 import MainContent from './MainContent/MainContent'
@@ -21,16 +21,16 @@ function App() {
   return (
     <>
         <div className={styles.mainContainer}>
-          <Routes>
-              <Route path='/' element={<MainContent animationOn={animationOn}/>} />
-              {/* {blogdata.map((post) => (
-                  <Route path={`/blog/${post.id}`} element={<BlogPostPage id={post.id}/>} key={post.id} />
-              ))} */}
-              {projectdata.map((project, index) => (
-                  <Route path={`/project/${project.slug}`} element={project.pageComponent} key={index} />
-              ))}  
-              <Route path="*" element={<NotFound />} />   
-          </Routes>
+            <Routes>
+                <Route path='/' element={<MainContent animationOn={animationOn}/>} />
+                {/* {blogdata.map((post) => (
+                    <Route path={`/blog/${post.id}`} element={<BlogPostPage id={post.id}/>} key={post.id} />
+                ))} */}
+                {projectdata.map((project, index) => (
+                    <Route path={`/project/${project.slug}`} element={project.pageComponent} key={index} />
+                ))}  
+                <Route path="*" element={<NotFound />} />   
+            </Routes>
         </div>
       
     </>
