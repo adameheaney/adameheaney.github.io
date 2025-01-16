@@ -1,4 +1,5 @@
 import BackgammonPage from "./Project Pages/Backgammon Page/BackgammonPage"
+import GeographyPage from "./Project Pages/Daily Geography Page/GeographyPage"
 
 const projectdata = [
     { 
@@ -43,11 +44,7 @@ const projectdata = [
         date:'May \'23 - Aug \'23', 
         imageUrl:'/assets/images/ProjectThumbnails/dailygeographyicon.png',
         page:'https://www.github.com/adameheaney/daily-geography',
-        pageComponent: (
-            <>
-            
-            </>
-        )    
+        pageComponent: <GeographyPage />
     },
     { 
         title:'Backgammon',

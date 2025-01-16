@@ -1,0 +1,28 @@
+.externalButton:hover {
+      font-weight: bold;
+      border: 2px solid #ffffff;
+}
+
+.externalButton {
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    width: fit-content;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    font-family: 'urbanist';
+    font-weight: 500;
+    line-height: 20px;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

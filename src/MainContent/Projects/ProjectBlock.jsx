@@ -12,12 +12,12 @@ export default function ProjectBlock({title, date, imageUrl, page, slug, mobile 
         <>
             <div className={`${styles.projectContainer} project flex-col lg:flex-row`}>
                 <div className={`${styles.blockContainer}  h-auto justify-center w-[100%] lg:h-[120px] lg:justify-normal lg:w-[66%]`}>
-                    <a className={`${styles.projectTitle} ${mobile ? activeProject ? styles.inactive : styles.active : ''} sm:pl-[50px]`} href={page} target='_blank'>
+                    <Link onClick={() => window.scrollTo(0, 0)} className={`${styles.projectTitle} ${mobile ? activeProject ? styles.inactive : styles.active : ''} sm:pl-[50px]`} to={'/project/' + slug}>
                         {title} <br/>
                         {date}
-                    </a>
+                    </Link>
                     {/* <div className={`${styles.overlay} ${activeProject ? styles.inactive : styles.active}`}></div> */}
-                    <Link to= {page} target='_blank' className={styles.link}>
+                    <Link onClick={() => window.scrollTo(0, 0)} to= {'/project/' + slug} className={styles.link}>
                         <img
                                 className={`${styles.image} ${mobile ? activeProject? styles.active : styles.inactive : ''} delay-200 transition-opacity ease-in duration-500 border-b-white border-solid border-t-0 border-l-0 border-r-0 border-[3px] lg:border-r-white lg:border-r-[3px] lg:border-solid lg:delay-0
                                                                                                                             `}

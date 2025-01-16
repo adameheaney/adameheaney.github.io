@@ -1,4 +1,7 @@
 import styles from './ProjectSidebar.module.css'
+import { Link } from 'react-router-dom';
+import { AiFillHome } from "react-icons/ai";
+
 
 import { useState, useEffect } from 'react';
 
@@ -39,7 +42,7 @@ export default function ProjectSidebar({setAnimationOn, animationOn}) {
             if((currentScrollY <= lastScrollY && (window.scrollY >= sectionTop - sectionHeight / 4))) {
                 currentSection = section.id;
             }
-            if(section.id === 'contact-me' && window.scrollY >= document.documentElement.scrollHeight - 1000)
+            if(section.id === 'showcase' && window.scrollY >= document.documentElement.scrollHeight - 1000)
                 currentSection = section.id;
         }
         lastScrollY = currentScrollY
@@ -61,10 +64,16 @@ export default function ProjectSidebar({setAnimationOn, animationOn}) {
                 isOn={animationOn}
                 styling={{marginTop:'20px'}}
             /> */}
+            <Link onClick={() => window.scrollTo(0, 0)} to={'/'} className={`${styles.backToHome} `}> 
+                    <AiFillHome size={32}/>
+            </Link>
             <div className={styles.inner}>
                 <ul className={`${styles.tabsList} flex flex-row sm:flex-col align-middle justify-center text-center
                                text-[12px] sm:text-[18px]`}>
-                    <li className={`${styles.tab} ${activeTab === 'about' || activeTab === 'a'? styles.active : ''} flex items-center`} onClick={() => scrollToSection('about')}>
+                    <li className={`${styles.tab} ${activeTab === 'welcome' || activeTab === 'a'? styles.active : ''} flex items-center`} onClick={() => scrollToSection('welcome')}>
+                        Welcome
+                    </li>
+                    <li className={`${styles.tab} ${activeTab === 'about' ? styles.active : ''} flex items-center`} onClick={() => scrollToSection('about')}>
                         About
                     </li>
                     <li className={`${styles.tab} ${activeTab === 'skills' ? styles.active : ''} flex items-center`} onClick={() => scrollToSection('skills')}>

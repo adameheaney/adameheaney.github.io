@@ -1,59 +1,26 @@
 import ProjectSidebar from '../Sidebar-ProjectPages/ProjectSidebar'
-import styles from './BackgammonPage.module.css'
+import styles from './GeographyPage.module.css'
 
-import {useState, useEffect} from 'react';
-import axios from 'axios';
 import React from 'react';
 import ExternalLink from '../../../../Components/Button/ExternalLink';
 import { FaGithub } from 'react-icons/fa6';
+import { FaGamepad } from "react-icons/fa6";
 
 
-export default function BackgammonPage() {
+
+export default function GeographyPage() {
     
-    const [gameState, setGameState] = useState('');
-    const [inputValue, setInputValue] = useState('');
-
-    useEffect(() => {
-        axios.get('https://backgammon-adam-992f80c86472.herokuapp.com/state')
-        .then((response) => {
-            setGameState(response.data); 
-        })
-        .catch((error) => {
-            console.error('Error fetching game state:', error);
-        });
-    }, []);
-
-    const handleKeyDown = (event) => {
-        if (event.key === 'Enter') {
-            setInputValue("");
-            axios.post('https://backgammon-adam-992f80c86472.herokuapp.com/move', inputValue)
-            .then((response) => {
-                axios.get('https://backgammon-adam-992f80c86472.herokuapp.com/state')
-                .then((response) => {
-                    setGameState(response.data); 
-                })
-                .catch((error) => {
-                    console.error('Error fetching game state:', error);
-                });
-                console.log(response)
-            })
-            .catch((error) => {
-                console.error('error making move: ', error);
-            });
-        }
-      };
-
     return (
         <>
             <ProjectSidebar />
             <div className={`${styles.Container} w-full sm:w-3/4 sm:ml-[25%]`}>
                 <div id='welcome' className={`flex flex-col py-[30vh] text-center section`}>
 
-                    <p className='text-[50px] sm:text-[70px]'> Backgammon</p>
+                    <p className='text-[50px] sm:text-[70px]'> Daily Geography</p>
                     
                     <div className={`${styles.linkContainer}`}>
-                        <ExternalLink icon={<FaGithub />} text={`Full Game`} link={'https://github.com/adameheaney/backgammon-game'}/>
-                        <ExternalLink icon={<FaGithub />} text={`Web App`} link={'https://github.com/adameheaney/backgammon-web'}/>
+                        <ExternalLink icon={<FaGithub />} text={`GitHub`} link={'https://github.com/adameheaney/daily-geography'}/>
+                        <ExternalLink icon={<FaGamepad />} text={`Web App`} link={'https://daily-geography.netlify.app/'}/>
                     </div>
                     
                 </div>
@@ -151,17 +118,6 @@ export default function BackgammonPage() {
                     <h2 className='p-[50px]'>
                         Here is an interactive showcase of the text-interface Backgammon game I created. <br/>Go ahead and try it out!
                     </h2>
-                    <textarea className={`${styles.terminal}`} readOnly
-                    value={gameState}>
-                    </textarea>
-                    <input 
-                        className={styles.terminalInput} 
-                        type='text' 
-                        placeholder='Input move here ("roll x y", e.g. 4 0 1)' 
-                        onKeyDown={handleKeyDown}
-                        onChange={(e) => setInputValue(e.target.value)}
-                        value={inputValue}
-                    />
                 </div>
             </div>
         </>
