@@ -1,0 +1,44 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.Container h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arvo';
+    color: rgb(158, 198, 158);
+}
+
+.Container h2, h3, h4, h5, h6 {
+    margin-bottom: 5px;
+}
+
+.Container h3 {
+    font-size: 18px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.showcase {
+    display: flex;
+    flex-direction: column;
+}
+
+.linkContainer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    gap: 40px;
+    height: 50px;
+}

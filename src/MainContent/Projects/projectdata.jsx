@@ -1,5 +1,8 @@
 import BackgammonPage from "./Project Pages/Backgammon Page/BackgammonPage"
 import GeographyPage from "./Project Pages/Daily Geography Page/GeographyPage"
+import LaserDefenderPage from "./Project Pages/Laser Defender Page/LaserDefenderPage"
+import PersonalSitePage from "./Project Pages/Personal Site Page/PersonalSitePage"
+import PTCPage from "./Project Pages/PTC Page/PTCPage"
 
 const projectdata = [
     { 
@@ -8,11 +11,7 @@ const projectdata = [
         date:'Summer of \'21',
         imageUrl:'/assets/images/ProjectThumbnails/laserdefenderthumbnail.png',
         page:'https://machooey.itch.io/plane-defender-game',
-        pageComponent: (
-            <>
-                
-            </>
-        )
+        pageComponent: <LaserDefenderPage />
     },
     { 
         title:'Photo to Color Palette', 
@@ -20,11 +19,7 @@ const projectdata = [
         date:'Nov \'22 - May \'23', 
         imageUrl:'/assets/images/ProjectThumbnails/ptcProjectIcon2.0.png',
         page:'https://www.github.com/adameheaney/PTC-GUI',
-        pageComponent: (
-            <>
-            
-            </>
-        )    
+        pageComponent: <PTCPage />   
     },
     { 
         title:'Personal Website',
@@ -32,11 +27,7 @@ const projectdata = [
         date:'April \'23 - Current', 
         imageUrl:'/assets/images/ProjectThumbnails/adamheaneywebsiteIcon.png',
         page:'https://www.github.com/adameheaney/adameheaney.github.io-react',
-        pageComponent: (
-            <>
-            
-            </>
-        )    
+        pageComponent: <PersonalSitePage /> 
     },
     { 
         title:'Daily Geography',
