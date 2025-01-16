@@ -11,7 +11,7 @@ export default function ProjectBlock({title, date, imageUrl, page, slug, mobile 
     return (
         <>
             <div className={`${styles.projectContainer} project flex-col lg:flex-row`}>
-                <div className={`${styles.blockContainer}  h-auto justify-center w-[100%] lg:h-[120px] lg:justify-normal lg:w-[66%]`}>
+                <div className={`${styles.blockContainer}  h-auto justify-center w-[100%] lg:h-[150px] lg:justify-normal lg:w-[66%]`}>
                     <Link onClick={() => window.scrollTo(0, 0)} className={`${styles.projectTitle} ${mobile ? activeProject ? styles.inactive : styles.active : ''} sm:pl-[50px]`} to={'/project/' + slug}>
                         {title} <br/>
                         {date}
