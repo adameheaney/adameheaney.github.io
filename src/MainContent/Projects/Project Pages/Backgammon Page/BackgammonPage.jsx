@@ -50,7 +50,8 @@ export default function BackgammonPage() {
                 <div id='welcome' className={`flex flex-col py-[30vh] text-center section`}>
 
                     <p className='text-[50px] sm:text-[70px]'> Backgammon</p>
-                    
+                    <p className='text-[15px] sm:text-[30px] text-gray-500'> Sep '23 - Feb '24 | Dec '24 - Jan '25</p>
+
                     <div className={`${styles.linkContainer}`}>
                         <ExternalLink icon={<FaGithub />} text={`Full Game`} link={'https://github.com/adameheaney/backgammon-game'}/>
                         <ExternalLink icon={<FaGithub />} text={`Web App`} link={'https://github.com/adameheaney/backgammon-web'}/>
@@ -60,7 +61,7 @@ export default function BackgammonPage() {
                  <div id='about' className={`${styles.about} section`}>
                     <h1>About</h1>
                     <span className='p-[50px]'>
-                    <h3>Motivation:</h3> 
+                    <h3>Story:</h3> 
                     <span className='leading-normal'>I started this project during my first semester as a sophomore at Brandeis University 
                         after my friend became obsessed with backgammon strategy. He’d been reading up on techniques and putting in 
                         serious effort to improve his game, and I saw this as the perfect challenge: could I create a backgammon bot 

@@ -35,7 +35,7 @@
 }
 
 .linkContainer {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     place-content: center;

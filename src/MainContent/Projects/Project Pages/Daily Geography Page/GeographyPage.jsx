@@ -17,7 +17,7 @@ export default function GeographyPage() {
                 <div id='welcome' className={`flex flex-col py-[30vh] text-center section`}>
 
                     <p className='text-[50px] sm:text-[70px]'> Daily Geography</p>
-                    
+                    <p className='text-[15px] sm:text-[30px] text-gray-500'> May '23 - Aug '23</p>
                     <div className={`${styles.linkContainer}`}>
                         <ExternalLink icon={<FaGithub />} text={`GitHub`} link={'https://github.com/adameheaney/daily-geography'}/>
                         <ExternalLink icon={<FaGamepad />} text={`Web App`} link={'https://daily-geography.netlify.app/'}/>
@@ -27,96 +27,68 @@ export default function GeographyPage() {
                  <div id='about' className={`${styles.about} section`}>
                     <h1>About</h1>
                     <span className='p-[50px]'>
-                    <h3>Motivation:</h3> 
-                    <span className='leading-normal'>I started this project during my first semester as a sophomore at Brandeis University 
-                        after my friend became obsessed with backgammon strategy. He’d been reading up on techniques and putting in 
-                        serious effort to improve his game, and I saw this as the perfect challenge: could I create a backgammon bot 
-                        capable of beating him, no matter how much he practiced? The first step, of course, was to rebuild the entire 
-                        game from scratch, and that’s exactly what I set out to do. <br/> <br/>But why backgammon? It’s not just any game 
-                        to me. 
-                        I come from an Arab background and grew up in a tightknit, cultural community where backgammon has always 
-                        been a favorite. It’s more than a pastime—it’s part of the fabric of our social gatherings and traditions. 
-                        This personal connection made the project even more exciting and gave me the motivation to see it through. </span>
+                    <h3>Story:</h3> 
+                    <span className='leading-normal'>I started this project in May of 2023 when I first discovered the world of "the website".
+                        Me being naive, I decided to jump straight into it with little research into web development. I knew you needed to use HTML,
+                        CSS, and Javascript, so I just to jump in and create a webapp with vanilla tech. In retrospect, this was not the greatest
+                        decision in terms of time-consumption and effort, but, on the other hand, it was a wonderful learning experience for me.
+                        <br/><br/>
+                        I decided to create a geography quiz game for a couple of reasons. First and foremost, I was just beginning to get into geography
+                        and geology. It all started when I was at lunch with a friend one day and said "hey, we live on this earth, why don't we start
+                        acting like it by knowing what each country is called?" Obviously, this doesn't make much sense, but it was enough to convince me
+                        to start learning every country using a sporcle quiz. And so, after maybe a day or so, I had every country memorized. After completing
+                        the sporcle quiz, I decided that I needed more challenges, and thought it would be cool to create my own geography quiz
+                        app. So, that's what I decided to do. I created this "daily geography" quiz app with a "wordlesque" aesthetic. 
+                        
+                        <br/> <br/>
+                        In the end, it doesn't actually work the way wordle does. Rather, it creates a new quiz each time you refresh the page.
+                        This is because it was more fun for me to be able to play a new quiz whenever I wanted to (or it's because I never got
+                        around to adding that functionality). Regardless, I'm still very proud of it and am happy with the results.</span>
                     <br/> <br/> <br/>
                     <h3> What I learned:</h3> 
-                    <span className='leading-normal'> With this project, I wanted to dive deeper into object-oriented design, applying 
-                        the concepts I had learned in a meaningful way. What better challenge than creating a game from scratch? 
-                        I structured the code by designing distinct classes for each component of the game, such as a Dice class, 
-                        a Board class, a Piece class, and a Team class. My focus was not only on implementing these concepts but also 
-                        on maintaining clean, well-documented code. This approach ensures that I can revisit and tweak the project later, 
-                        learning from my past decisions and identifying areas for improvement. Overall, this project provided me with 
-                        a hands-on opportunity to explore object-oriented programming in a way that extended far beyond what 
-                        I experienced in class assignments, and I’m grateful for the lessons it taught me. </span>
+                    <span className='leading-normal'> My first website taught me a lot. To start, it taught me JS, CSS, and HTML. It also taught
+                        me to use AI, more specifically, ChatGPT, to foster my learning. ChatGPT, when used correctly, can boost your learning rather
+                        than take away from it, by making sure to always ask why it is doing what it does and what it is doing. Something else that I did
+                        with this project was learn datamining using Python. Using the urlopen library, I was able to scrape the internet for the data I needed. 
+                        After scraping the data, I cleaned it and put it into JSON format using Python's json library.
+                        This was my first experience with data mining and cleaning, and it was a very valuable skill to learn. I learned how to handle large datasets, clean them, and extract useful information from them.
+                        But in total, what I learned
+                        the most was creating webapps in general. This project sparked my interest in websites, and started me off on my journey to get to where
+                        I am now, creating my personal site using better technologies such as React, tailwind css, and more.</span>
                     </span>
                 </div>
                 <div id='skills' className={`${styles.skills} section`}>
                     <h1>Skills</h1>
                     <span className='px-[50px] pb-[50px]'>
-                        <br/><br/><h3>Object-Oriented Programming</h3>
+                        <br/><br/><h3>JavaScript,  &nbsp; HTML,  &nbsp;CSS</h3>
                         <span>
-                            As mentioned in the "About" section, this project in large was a great challenge for me in my
-                            object-oriented programming skills. To reiterate, backgammon, or any game for that matter, is naturally
-                            an object-oriented game, with pieces, a board, teams, and dice. Before coding at all, I used a notebook and pen
-                            to devise a plan on how I'd separate each object and bring them together. Once I had the object-oriented design
-                            down, it was simple to implement each object, and then bring them together for the final game.
-                            <br/><br/>
-                            A challenge during this project was deciding on how to represent the teams. Should each piece have the team stored in
-                            them? Should the teams just be two separate matrices of the pieces positions? 
+                            Wrote over 400 lines of JavaScript, 200 lines of CSS, and 70 lines of HTML. While not being much, this was my
+                            first website, and I was very proud of it. I learned a lot about how to use JS, HTML, and CSS together to create
+                            a website. I learned how to use JS to manipulate the DOM, how to use CSS to style the website, and how to use HTML
+                            to create the structure of the website. This introduction to these technologies gave me a strong foundation to build
+                            upon in the future.
                         </span>
-                        <br/><br/><h3>Java, Data Structures, and Algorithms</h3>
+                        <br/><br/><h3>Webapp development and deployment</h3>
                         <span>
-                            This project is coded entirely in Java, which has been my primary language for a few years now. 
-                            Using Java for this project felt very natural, given it's built for object-oriented programming.
-                            This project greatly solidified my Java skills, writing 1000+ lines of Java and applying what I 
-                            learned in class into a real life project that I am passionate about.
-                            <br/><br/>
-                            In this project, I used LinkedLists to store the pieces at each coordinate on the board. In backgammon, it's
-                            important to know how many pieces there are on each position in the board, and it made the most sense to use
-                            a LinkedList to store the pieces, making it easy to detach pieces from one position and move it to another position
-                            on the board.
-                            <br/><br/>
-                            In backgammon, it's very important to know every possible move in order to decide which moves are legal. It's difficult
-                            to explain, so <a href='https://www.bkgm.com/rules.html' target='_blank'>here</a> is the website I used to imitate the
-                            rules. As a result, I had to create an algorithm that would go through a backgammon board and derive the possible 
-                            legal moves a player was allowed to make with their dice. To implement this, I ended up writing a recursive dynamic
-                            programming
-                            algorithm that iterates through every occupied space on the board, getting every legal move for that space with 
-                            each dice that was rolled for that turn. This was no easy feat, and was the part of the project that took me the
-                            most head-scratching, but it felt incredibly rewarding once it was complete and the game could run perfectly.
+                            In total, this project taught me how to create a webapp from scratch, and how to deploy it. I learned how to use
+                            Netlify to deploy my website, and how to use GitHub to host my code. I learned how to use the terminal to push my code
+                            to GitHub, and how to use Netlify to deploy my website. This was a very important skill to learn, as it taught me how to
+                            take a project from start to finish, and how to deploy it so that others can use it.
 
                         </span>
-                        <br/><br/><h3>Testing and JUnit</h3>
+                        <br/><br/><h3>Python Datamining, Data Cleaning // JSON</h3>
                         <span>
-                            Backgammon has many obscure rules and places where the game logic can get messy and very conditional, 
-                            and when recreating a game, it's very important to catch those edge cases
-                            and make sure the game logic and ruleset are working properly. In class, I learned about JUnit, and all of my
-                            assignments were graded using it, but we never wrote our own JUnit tests. So, for this project, I learned to write
-                            my own simple JUnit tests. Testing was a very important skill I learned from this project, teaching me the 
-                            importance of testing your own code to make sure it works, and to always think outside the box for edge cases and 
-                            catch them.
-                        </span>
-                        <br/><br/><h3>Documentation</h3>
-                        <span>
-                            <b>Comprehensive ReadMe:</b> This project features a comprehensive ReadMe file, describing the project in depth.
-                            The ReadMe includes details on how to begin the game, the rules of the game, how to add your own code to the project,
-                            and other information about the project and inner-workings of the project. The ReadMe is a very important part of the
-                            documentation so that anyone unfamiliar with the project can easily get started and interact with the project!
-                            <br/><br/>
-                            <b>Descriptive and Extensive Javadocs:</b> This project features <i>extensive</i> Javadocs for every function, variable, 
-                            and class within every file. In past projects, I rarely commented my code, deciding that it was obvious enough to
-                            be able to go back and understand it without commenting. Of course, I learned from my past mistakes with those 
-                            projects when I went back and it took me a painfully long time to piece together something that was so simple to me
-                            back when I was working on it. So, for this project, I made sure to add a highly descriptive Javadoc for everything,
-                            even where it seemed unnecessary. The skill of adding Javadocs and creating comments
-                            is incredibly important, for maintainability, readability, understandability, etc.
-
+                            This project taught me how to use Python to mine data from the internet. I used the urlopen library to scrape the internet
+                            for the data I needed. After scraping the data, I cleaned it and put it into JSON format using Python's json library.
+                            This was my first experience with data mining and cleaning, and it was a very valuable skill to learn. I learned how to handle large datasets, clean them, and extract useful information from them.
+                            By using Python to scrape the data from the web, I saved countless hours of typing each country's information meticulously into a JSON file.
                         </span>
                     </span>
                 </div>
                 <div id='showcase' className={`${styles.showcase} section`}>
                     <h1>Showcase</h1>
                     <h2 className='p-[50px]'>
-                        Here is an interactive showcase of the text-interface Backgammon game I created. <br/>Go ahead and try it out!
+                        You can play the game using the button in the welcome section of this page!
                     </h2>
                 </div>
             </div>

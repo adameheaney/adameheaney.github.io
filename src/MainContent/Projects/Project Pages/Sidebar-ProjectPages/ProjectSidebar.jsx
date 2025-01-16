@@ -39,10 +39,10 @@ export default function ProjectSidebar({setAnimationOn, animationOn}) {
             if ((currentScrollY > lastScrollY && (rect.top >= 0 && rect.top <= window.innerHeight / 1.5))) {
                 currentSection = section.id;
             }
-            if((currentScrollY <= lastScrollY && (window.scrollY >= sectionTop - sectionHeight / 4))) {
+            else if((currentScrollY <= lastScrollY && (window.scrollY >= sectionTop - sectionHeight / 1))) {
                 currentSection = section.id;
             }
-            if(section.id === 'showcase' && window.scrollY >= document.documentElement.scrollHeight - 1000)
+            else if(section.id === 'showcase' && window.scrollY >= document.documentElement.scrollHeight - 1000)
                 currentSection = section.id;
         }
         lastScrollY = currentScrollY
