@@ -2,51 +2,63 @@ import styles from './Sidebar.module.css'
 
 import Toggle from '../Components/Toggle/Toggle';
 
+import { PiHandWavingFill } from "react-icons/pi";
+import { MdInfo } from 'react-icons/md';
+import { FaDiagramProject } from 'react-icons/fa6';
+import { FaStar } from 'react-icons/fa6';
+import { IoMail } from 'react-icons/io5';
+import { FaHouse } from 'react-icons/fa6';
+
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 export default function Sidebar({setAnimationOn, animationOn}) {
     
 	const [activeTab, setActiveTab] = useState('w');
 	let lastScrollY = 0;
+	let tabs = ['Welcome', 'About', 'Projects', 'Experiences', 'Contact'];
+	let icons = [<PiHandWavingFill />, <MdInfo />, <FaDiagramProject />, <FaStar />, <IoMail />];
 
 	const scrollToSection = (id, offset = 0) => {
 		const targetElement = document.getElementById(id);
 		if (targetElement) {
 			const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-    		const offsetPosition = elementPosition + offset;
+			const selector = document.getElementById('selector');
 		  	window.scrollTo({
 				behavior: "smooth",
-				top: offsetPosition,
-		  	});
+				top: elementPosition,
+		  	})
 		} else {
 		  console.error(`Element with id "${id}" not found.`);
 		}
 	};
 	
 	const handleScroll = () => {
-		const sections = document.querySelectorAll('.section');
+		const selector = document.getElementById('selector');
 		let currentSection = activeTab;
 		const currentScrollY = window.scrollY
-
-
-		for (let i = 0; i < sections.length; i++) {
-			let section = sections[i]
+		for (let i = 0; i < tabs.length; i++) {
+			if(document.getElementById(tabs[i]) === null) 
+				continue;
+			let section = document.getElementById(tabs[i]);
 			const rect = section.getBoundingClientRect();
 			const sectionTop = section.offsetTop;
 			const sectionHeight = section.clientHeight;
-
+			
+			//up
 			if ((currentScrollY > lastScrollY && (rect.top >= 0 && rect.top <= window.innerHeight / 1.5))) {
 				currentSection = section.id;
 			}
+			//down
 			if((currentScrollY <= lastScrollY && (window.scrollY >= sectionTop - sectionHeight / 4))) {
 				currentSection = section.id;
 			}
-			if(section.id === 'contact-me' && window.scrollY >= document.documentElement.scrollHeight - 1000)
-				currentSection = section.id;
 		}
 		lastScrollY = currentScrollY
-		if(currentSection != 'w')
+		if(currentSection !== 'w') {
 			setActiveTab(currentSection);
+			selector.style.top = 165 + (tabs.indexOf(currentSection)) * 65 + 'px';
+		}
 	};
 	
 	useEffect(() => {
@@ -56,7 +68,7 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 	
 	
 	return (
-        <div className={`${styles.sidebar} h-1/6 w-full hidden sm:flex sm:w-3/12 top-0 left-0 sm:h-full`}>
+        <div className={`${styles.sidebar} h-1/6 w-full hidden sm:flex sm:w-[18%] top-0 left-0 sm:h-full`}>
 			{/* <Toggle 
 				// label= <TbSpiralOff size={'25px'} style={{color:'white', left:'0px'}}/>
 				onToggle={setAnimationOn}
@@ -64,26 +76,16 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 				styling={{marginTop:'20px'}}
 			/> */}
 			<div className={styles.inner}>
-				<ul className={`${styles.tabsList} flex flex-row sm:flex-col align-middle justify-center text-center
-							   text-[12px] sm:text-[18px]`}>
-					<li className={`${styles.tab} ${activeTab === 'welcome' || activeTab === 'w'? styles.active : ''} flex items-center`} onClick={() => scrollToSection('welcome')}>
-						Welcome
-					</li>
-					<li className={`${styles.tab} ${activeTab === 'about-me' ? styles.active : ''} flex items-center`} onClick={() => scrollToSection('about-me')}>
-						About Me
-					</li>
-					<li className={`${styles.tab} ${activeTab === 'projects' ? styles.active : ''} flex items-center`} onClick={() => scrollToSection('projects', 1)}>
-						Projects
-					</li>
-					{/* <li className={styles.tab} onClick={() => scrollToSection('experiences')}>
-						Experiences
-					</li> */}
-					{/* <li className={`${styles.tab} ${activeTab === 'blog-posts' ? styles.active : ''}`} onClick={() => scrollToSection('blog-posts')}>
-						Blog Posts
-					</li> */}
-					<li className={`${styles.tab} ${activeTab === 'contact-me' ? styles.active : ''} flex items-center`} onClick={() => scrollToSection('contact-me')}>
-						Contact Me
-					</li>
+				<Link onClick={() => window.scrollTo(0, 0)} to={'/'} className={`${styles.backToHome} `}> 
+						<FaHouse size={32} fill='white'/>
+				</Link>
+				<ul className={`${styles.tabsList} flex flex-row sm:flex-col text-center text-[12px] sm:text-[18px]`}>
+					<div id='selector' className={styles.tabSelector}></div>
+					{tabs.map((tab, index) => (
+						<li key={tab} className={`${styles.tab} ${activeTab === tab ? styles.active : ''} ${activeTab === 'w' && tab==='Welcome' ? styles.active : ''} flex items-center`} onClick={() => scrollToSection(tab)}>
+							{icons[index]} {tab}
+						</li>
+					))}
 				</ul>
 			</div>
 		</div>
