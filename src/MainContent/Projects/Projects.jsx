@@ -60,7 +60,7 @@ export default function Projects({animationOn}) {
     }, [])
 
     return (
-        <div className='section bg-black' id='projects' >
+        <div className='section bg-black' id='Projects' >
             <h1>
                 Projects
             </h1>

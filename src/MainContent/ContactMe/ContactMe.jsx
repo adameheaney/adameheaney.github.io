@@ -8,7 +8,7 @@ import { FaGithub } from "react-icons/fa";
 
 export default function ContactMe({animationOn}) {
     return (
-        <div id='contact-me' className={`${styles.ContactMeSection} section`}>
+        <div id='Contact' className={`${styles.ContactMeSection} section`}>
             <h1>
                 Contact Me
             </h1>

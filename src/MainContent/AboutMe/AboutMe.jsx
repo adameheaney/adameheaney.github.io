@@ -3,7 +3,7 @@ import styles from './AboutMe.module.css'
 
 export default function AboutMe({animationOn}) {
     return (
-        <div className={'section bg-black'} id='about-me'>
+        <div className={'section bg-black'} id='About'>
             <h1>
                 About Me
             </h1>

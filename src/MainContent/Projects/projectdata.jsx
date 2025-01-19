@@ -40,7 +40,7 @@ const projectdata = [
     { 
         title:'Backgammon',
         slug:'backgammon', 
-        date:'Sep \'23 - Feb \'24',
+        date:'Sep \'23 - Jan \'25',
         imageUrl:'/assets/images/ProjectThumbnails/backgammonIcon.png',
         page:'https://www.github.com/adameheaney/backgammon-game',
         pageComponent: <BackgammonPage />

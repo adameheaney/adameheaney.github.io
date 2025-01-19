@@ -3,6 +3,11 @@
     border-top: 2px#c7c7c7 solid;
     display: flex;
     flex-direction: column;
+    padding: 25vh 10vh 0 10vh;
+}
+
+.fadeIn {
+    animation: fade-in 1s ease;
 }
 
 .inactive {
@@ -24,6 +29,18 @@
     }
 
     100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
         transform: translateY(0px);
     }
 }

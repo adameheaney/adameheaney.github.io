@@ -57,7 +57,7 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 		lastScrollY = currentScrollY
 		if(currentSection !== 'w') {
 			setActiveTab(currentSection);
-			selector.style.top = 165 + (tabs.indexOf(currentSection)) * 65 + 'px';
+			selector.style.top = 195 + (tabs.indexOf(currentSection)) * 65 + 'px';
 		}
 	};
 	
