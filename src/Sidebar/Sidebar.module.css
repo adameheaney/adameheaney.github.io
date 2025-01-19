@@ -28,9 +28,8 @@
 .tabsList {
 	list-style: none;
 	gap: 40px;
-	margin: 0;
 	width: 100%;
-	align-items: center;
+	align-items: left;
 	height: fit-content;
 }
 
@@ -39,16 +38,20 @@
 	height: 35px;
 	width: 90%;
 	border-radius: 8px;
-	background-color: white;
-	mix-blend-mode: difference;
+	background-color: #ffffff;
+	/* mix-blend-mode: difference; */
 	pointer-events: none;
 	transition: top 0.3s ease;
 	top: 165px;
+	margin-left: 15px;
 }
 
 .tab {
 	color: white;
 	user-select: none;
+	padding-left: 30px;
+	transition: color 1s ease;
+	gap: 10px;
 }
 
 .tab:hover {
@@ -60,7 +63,8 @@
 
 .active {
 	cursor: pointer;
-	color: white;
+	color: #03131c;
+	z-index: 7;
 	font-weight: 600;
 }
 

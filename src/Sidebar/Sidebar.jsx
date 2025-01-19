@@ -2,25 +2,30 @@ import styles from './Sidebar.module.css'
 
 import Toggle from '../Components/Toggle/Toggle';
 import { FaHouse } from "react-icons/fa6";
+
+import { PiHandWavingFill } from "react-icons/pi";
+import { MdInfo } from "react-icons/md";
+import { FaLaptop } from "react-icons/fa";
+import { FaDiagramProject } from "react-icons/fa6";
+import { FaStar } from "react-icons/fa6";
+import { IoMail } from "react-icons/io5";
+
 import { Link } from 'react-router-dom';
 
 import { useState, useEffect } from 'react';
 
 export default function Sidebar({setAnimationOn, animationOn}) {
     
-	const [activeTab, setActiveTab] = useState('');
+	const [activeTab, setActiveTab] = useState('w');
 	let lastScrollY = 0;
 	let tabs = ['Welcome', 'About', 'Skills', 'Projects', 'Experiences', 'Contact'];
-	let listenerPaused = false;
+	let icons = [<PiHandWavingFill />, <MdInfo />, <FaLaptop />, <FaDiagramProject />, <FaStar />, <IoMail />];
 
 	const scrollToSection = (id, offset = 0) => {
 		const targetElement = document.getElementById(id);
 		if (targetElement) {
 			const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-    		const offsetPosition = elementPosition + offset;
 			const selector = document.getElementById('selector');
-			listenerPaused = true;
-			selector.style.top = 165 + (tabs.indexOf(id)) * 65 + 'px';
 		  	window.scrollTo({
 				behavior: "smooth",
 				top: elementPosition,
@@ -34,9 +39,6 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 		const selector = document.getElementById('selector');
 		let currentSection = activeTab;
 		const currentScrollY = window.scrollY
-		if(listenerPaused) {
-			return;
-		}
 		for (let i = 0; i < tabs.length; i++) {
 			if(document.getElementById(tabs[i]) === null) 
 				continue;
@@ -55,7 +57,7 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 			}
 		}
 		lastScrollY = currentScrollY
-		if(currentSection !== '') {
+		if(currentSection !== 'w') {
 			setActiveTab(currentSection);
 			selector.style.top = 165 + (tabs.indexOf(currentSection)) * 65 + 'px';
 		}
@@ -80,12 +82,10 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 						<FaHouse size={32} fill='white'/>
 				</Link>
 				<ul className={`${styles.tabsList} flex flex-row sm:flex-col text-center text-[12px] sm:text-[18px]`}>
-					<div id='selector' className={styles.tabSelector}>
-
-					</div>
-					{tabs.map((tab) => (
-						<li key={tab} className={`${styles.tab} ${activeTab === tab ? styles.active : ''} flex items-center`} onClick={() => scrollToSection(tab)}>
-							{tab}
+					<div id='selector' className={styles.tabSelector}></div>
+					{tabs.map((tab, index) => (
+						<li key={tab} className={`${styles.tab} ${activeTab === tab ? styles.active : ''} ${activeTab === 'w' && tab==='Welcome' ? styles.active : ''} flex items-center`} onClick={() => scrollToSection(tab)}>
+							{icons[index]} {tab}
 						</li>
 					))}
 				</ul>

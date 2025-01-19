@@ -1,5 +1,6 @@
 .AboutMe {
     box-shadow: 0px -10px 20px 5px rgba(0, 0, 0, 0.4);
+    background-color: #edeef5;
 }
 
 .whoAmI {
@@ -14,6 +15,7 @@
     box-sizing: border-box;
     text-align: justify;
     gap: 50px;
+    color: black;
 }
 
 h2 {

@@ -7,7 +7,6 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  background-color: black;
   color: rgba(255, 255, 255, 0.87);
 
   font-synthesis: none;
@@ -19,7 +18,8 @@
 body {
   margin: 0;
   background-size: cover; 
-  background-image: url('./assets/images/background.png');
+  background-color: #0a0f23;
+  /* background-image: url('./assets/images/background.png'); */
   background-attachment: fixed;
 }
 .background {
