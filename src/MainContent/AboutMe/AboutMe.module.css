@@ -1,7 +1,11 @@
+.AboutMe {
+    box-shadow: 0px -10px 20px 5px rgba(0, 0, 0, 0.4);
+}
+
 .whoAmI {
     padding: 50px;
     text-align: justify;
-    
+    color: black;
 }
 
 .funStuff {

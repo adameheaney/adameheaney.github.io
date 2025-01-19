@@ -1,6 +1,5 @@
 .helloContainer {
     height: 100vh;
-    border-top: 2px#c7c7c7 solid;
     display: flex;
     flex-direction: column;
 }

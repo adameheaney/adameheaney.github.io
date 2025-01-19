@@ -8,9 +8,9 @@ import { FaGithub } from "react-icons/fa";
 
 export default function ContactMe({animationOn}) {
     return (
-        <div id='contact-me' className={`${styles.ContactMeSection} section`}>
+        <div id='Contact' className={`${styles.ContactMeSection} section`}>
             <h1>
-                Contact Me
+                Contact
             </h1>
             <div className={`${styles.infoContainer} flex flex-col lg:flex-row flex-grow`}>
                 <span className={styles.info}>

@@ -1,57 +1,53 @@
 .sidebar {
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-moz-align-items: -moz-flex-end;
-		-webkit-align-items: -webkit-flex-end;
-		-ms-align-items: -ms-flex-end;
-		align-items: flex-end;
-		-moz-justify-content: space-between;
-		-webkit-justify-content: space-between;
-		-ms-justify-content: space-between;
-		justify-content: space-between;
-		background-attachment: scroll, scroll;
-		background-position: top left,top left;
-		background-color: black;
-		background-repeat: repeat, no-repeat;
-		background-size: 500%, 100%; 
-		color: rgba(255, 255, 255, .5);
-		position: fixed;
-		text-align: center;
-        align-items: center;
-		overflow: hidden;
-		box-sizing: border-box;
-		border: 2px solid #c7c7c7;
-		z-index: 5;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-between;
+	background-attachment: scroll, scroll;
+	background-color: #03131c;
+	color: white;
+	position: fixed;
+	text-align: center;
+	align-items: center;
+	overflow: hidden;
+	box-sizing: border-box;
+	z-index: 5;
+	box-shadow: 7px 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .inner {
 	display: flex;
-    -moz-flex-grow: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-grow: 1;
     flex-grow: 1;
-    align-items: center;
+    align-items: left;
 	justify-content: center;
 	justify-items: center;
 	text-align: center;
-    /* overflow: hidden; */
+	align-items: center;
 	width: 100%;
-
 }
 
 .tabsList {
 	list-style: none;
-	gap: 20px;
+	gap: 40px;
 	margin: 0;
-	padding: 0;
 	width: 100%;
 	align-items: center;
+	height: fit-content;
+}
+
+.tabSelector {
+	position: absolute;
+	height: 35px;
+	width: 90%;
+	border-radius: 8px;
+	background-color: white;
+	mix-blend-mode: difference;
+	pointer-events: none;
+	transition: top 0.3s ease;
+	top: 165px;
 }
 
 .tab {
-	color: #c7c7c7;
+	color: white;
 	user-select: none;
 }
 
@@ -69,6 +65,15 @@
 }
 
 .link {
-    color:white;
+    color:black;
     text-decoration: underline rgb(158, 198, 158);;
+}
+
+.backToHome {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    top: 20px;
+    left: 20px;
+    position: absolute;
 }

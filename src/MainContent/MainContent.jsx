@@ -19,7 +19,7 @@ export default function MainContent() {
     return (
         <>
         <Sidebar setAnimationOn={setAnimation} animationOn={animationOn}/>
-            <div className={`${styles.Container} w-full sm:w-3/4 sm:ml-[25%] `}>
+            <div className={`${styles.Container} w-full sm:ml-[18%] `}>
                 <Hello />
                 <AboutMe animationOn={animationOn} />
                 <Projects animationOn={animationOn} />
