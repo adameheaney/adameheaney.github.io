@@ -77,7 +77,7 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 			/> */}
 			<div className={styles.inner}>
 				<Link onClick={() => window.scrollTo(0, 0)} to={'/'} className={`${styles.backToHome} `}> 
-						<FaHouse size={32} fill='white'/>
+						<FaHouse size={32} fill='#9ec69e'/>
 				</Link>
 				<ul className={`${styles.tabsList} flex flex-row sm:flex-col text-center text-[12px] sm:text-[18px]`}>
 					<div id='selector' className={styles.tabSelector}></div>

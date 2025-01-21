@@ -23,14 +23,6 @@ body {
   background-attachment: fixed;
   /* background-color: red; */
 }
-.background {
-  background-image: url('./assets/images/background.png');
-  background-attachment: fixed;
-  background-size: cover;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
 
 ul {
   gap:10px;
@@ -53,4 +45,27 @@ h2 {
   @apply text-center border-y-white border-solid border-y-2;
   font-size: 22px;
   margin: 10px 0 10px 0;
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Width of the vertical scrollbar */
+  height: 12px; /* Height of the horizontal scrollbar */
+  background-color: black;
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background-color: black; /* Light gray track */
+  border-radius: 10px;
+}
+
+/* Thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: white; /* Darker gray */
+  border-radius: 0px;
+}
+
+/* Thumb hover state */
+::-webkit-scrollbar-thumb:hover {
+  background: #a5a5a5; /* Even darker gray */
 }

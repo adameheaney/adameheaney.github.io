@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './PTCPage.module.css';
 import ProjectSidebar from '../Sidebar-ProjectPages/ProjectSidebar';
-import ExternalLink from '../../../../Components/Button/ExternalLink';
+import ExternalLink from '../../../../Components/ExternalLink/ExternalLink';
 import { FaGithub } from 'react-icons/fa6';
 
 const PTCPage = () => {

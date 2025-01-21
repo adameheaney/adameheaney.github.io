@@ -4,7 +4,7 @@ import styles from './BackgammonPage.module.css'
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import React from 'react';
-import ExternalLink from '../../../../Components/Button/ExternalLink';
+import ExternalLink from '../../../../Components/ExternalLink/ExternalLink';
 import { FaGithub } from 'react-icons/fa6';
 
 
@@ -45,9 +45,11 @@ export default function BackgammonPage() {
 
     return (
         <>
-            <ProjectSidebar />
-            <div className={`${styles.Container} w-full sm:w-3/4 sm:ml-[25%]`}>
-                <div id='welcome' className={`flex flex-col py-[30vh] text-center section`}>
+            <ProjectSidebar 
+                tabs={['Welcome', 'About', 'Skills', 'Showcase']}
+            />
+            <div className={`${styles.Container} w-full sm:w-3/4 sm:ml-[18%]`}>
+                <div id='Welcome' className={`flex flex-col py-[30vh] text-center section`}>
 
                     <p className='text-[50px] sm:text-[70px]'> Backgammon</p>
                     <p className='text-[15px] sm:text-[30px] text-gray-500'> Sep '23 - Feb '24 | Dec '24 - Jan '25</p>
@@ -58,7 +60,7 @@ export default function BackgammonPage() {
                     </div>
                     
                 </div>
-                 <div id='about' className={`${styles.about} section`}>
+                 <div id='About' className={`${styles.about} section`}>
                     <h1>About</h1>
                     <span className='p-[50px]'>
                     <h3>Story:</h3> 
@@ -83,7 +85,7 @@ export default function BackgammonPage() {
                         I experienced in class assignments, and I’m grateful for the lessons it taught me. </span>
                     </span>
                 </div>
-                <div id='skills' className={`${styles.skills} section`}>
+                <div id='Skills' className={`${styles.skills} section`}>
                     <h1>Skills</h1>
                     <span className='px-[50px] pb-[50px]'>
                         <br/><br/><h3>Object-Oriented Programming</h3>
@@ -147,7 +149,7 @@ export default function BackgammonPage() {
                         </span>
                     </span>
                 </div>
-                <div id='showcase' className={`${styles.showcase} section`}>
+                <div id='Showcase' className={`${styles.showcase} section`}>
                     <h1>Showcase</h1>
                     <h2 className='p-[50px]'>
                         Here is an interactive showcase of the text-interface Backgammon game I created. <br/>Go ahead and try it out!

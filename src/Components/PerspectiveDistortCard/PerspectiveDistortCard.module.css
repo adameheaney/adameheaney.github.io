@@ -1,0 +1,22 @@
+.cardContainer {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    border: solid #c7c7c7 2px;
+    position: relative;
+    transition: scale 0.5s ease;
+    /* cursor: pointer; */
+    background-color: black;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.4) rgba(0, 0, 255, 1);
+    box-sizing: border-box;
+}
+
+.textContainer {
+    padding: 20px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.scaler {
+    transition: transform 0.2s ease;
+}

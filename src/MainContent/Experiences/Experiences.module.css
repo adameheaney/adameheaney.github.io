@@ -1,0 +1,4 @@
+.experienceSection {
+    display:flex;
+    flex-direction: column;
+}

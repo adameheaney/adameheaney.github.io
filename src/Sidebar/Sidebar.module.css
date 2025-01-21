@@ -39,7 +39,7 @@
 	height: 35px;
 	width: 90%;
 	border-radius: 8px;
-	background-color: #ffffff;
+	background-color: #9ec69e;
 	/* mix-blend-mode: difference; */
 	pointer-events: none;
 	transition: top 0.3s ease;
@@ -57,7 +57,7 @@
 	animation: start-up-fly-in 1s ease;
 }
 
-.tab:hover {
+.tab:not(.active):hover {
 	cursor: pointer;
 	color: white;
 	font-weight: 600;
@@ -68,8 +68,10 @@
 	cursor: pointer;
 	color: black;
 	z-index: 7;
-	font-weight: 600;
+	font-weight: 700;
 }
+
+
 
 .link {
     color:black;
@@ -84,6 +86,11 @@
     left: 20px;
     position: absolute;
 	animation: start-up-fly-in 1s ease;
+    transition: scale 0.2s ease;
+}
+
+.backToHome:hover {
+    scale: 1.2;
 }
 
 @keyframes start-up-fly-in {
