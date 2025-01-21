@@ -87,7 +87,7 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 				<Link onClick={() => window.scrollTo(0, 0)} to={'/'} className={`${styles.backToHome} `}> 
 						<FaHouse size={32} fill='#9ec69e'/>
 				</Link>
-				<ul className={`${styles.tabsList} flex flex-row sm:flex-col text-center text-[12px] sm:text-[18px]`}>
+				<ul className={`${styles.tabsList} flex flex-row md:flex-col text-center text-[12px] md:text-[18px]`}>
 					<div id='selector' className={styles.tabSelector}></div>
 					{tabs.map((tab, index) => (
 						<li key={tab} className={`${styles.tab} ${activeTab === tab ? styles.active : ''} ${activeTab === 'w' && tab==='Welcome' ? styles.active : ''} flex items-center`} onClick={() => scrollToSection(tab)}>

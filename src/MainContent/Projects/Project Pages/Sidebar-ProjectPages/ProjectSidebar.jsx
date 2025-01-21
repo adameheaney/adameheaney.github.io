@@ -53,12 +53,20 @@ export default function ProjectSidebar({setAnimationOn, animationOn, tabs}) {
 		lastScrollY = currentScrollY
 		if(currentSection !== 'w') {
 			setActiveTab(currentSection);
-			selector.style.top = 228 + (tabs.indexOf(currentSection)) * 65 + 'px';
+			const tabList = selector.parentElement;
+			selector.style.top = tabList.offsetTop + ((tabs.indexOf(currentSection)) * 65) + -5 +  'px'; 
 		}
 	};
 	
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
+
+		//to position the selector at the start:
+		const selector = document.getElementById('selector');
+		const tabList = selector.parentElement;
+		const rect = tabList.getBoundingClientRect();
+		selector.style.top = tabList.offsetTop + -5 +  'px';
+
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
     
