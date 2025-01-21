@@ -57,18 +57,26 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 		lastScrollY = currentScrollY
 		if(currentSection !== 'w') {
 			setActiveTab(currentSection);
-			selector.style.top = 'calc(28.1vh + ' + ((tabs.indexOf(currentSection)) * 9.4) + 'vh)';
+			const tabList = selector.parentElement;
+			selector.style.top = tabList.offsetTop + ((tabs.indexOf(currentSection)) * 65) + -5 +  'px'; 
 		}
 	};
 	
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
+
+		//to position the selector at the start:
+		const selector = document.getElementById('selector');
+		const tabList = selector.parentElement;
+		const rect = tabList.getBoundingClientRect();
+		selector.style.top = tabList.offsetTop + -5 +  'px';
+
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 	
 	
 	return (
-        <div className={`${styles.sidebar} h-1/6 w-full hidden sm:flex sm:w-[18%] top-0 left-0 sm:h-full`}>
+        <div className={`${styles.sidebar} h-1/6 w-full hidden md:flex md:w-[18%] top-0 left-0 md:h-full`}>
 			{/* <Toggle 
 				// label= <TbSpiralOff size={'25px'} style={{color:'white', left:'0px'}}/>
 				onToggle={setAnimationOn}

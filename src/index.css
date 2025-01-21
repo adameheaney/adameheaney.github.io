@@ -28,7 +28,6 @@ ul {
   gap:10px;
   display: flex;
   flex-direction: column;
-  margin: 0 0 5px 0 !important;
 }
 
 a {
