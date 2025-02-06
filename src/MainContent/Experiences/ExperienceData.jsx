@@ -1,6 +1,6 @@
 const ExperienceData = [
     {
-        image: '../../../public/assets/images/ExperienceThumbnails/bibs logo.png',
+        image: '/assets/images/ExperienceThumbnails/BIBS logo.png',
         title: 'Lead Financial Accounting Teaching Assistant',
         company: 'Brandeis University',
         date: 'August 2024 - Current',
@@ -11,7 +11,7 @@ const ExperienceData = [
         ]
     },
     {
-        image: '../../../public/assets/images/ExperienceThumbnails/elevationlogo.jpeg',
+        image: '/assets/images/ExperienceThumbnails/elevationlogo.jpeg',
         title: 'Tech Intern',
         company: 'Elevation',
         date: 'June 2024 - August 2024',
@@ -21,7 +21,7 @@ const ExperienceData = [
         ]
     },
     {
-        image: '../../../public/assets/images/ExperienceThumbnails/tut_a_tet_logo.jpeg',
+        image: '/assets/images/ExperienceThumbnails/tut_a_tet_logo.jpeg',
         title: 'Software Engineer Intern',
         company: 'Tutatet',
         date: 'January 2024 - May 2024',
@@ -31,7 +31,7 @@ const ExperienceData = [
         ]
     },
     {
-        image: '../../../public/assets/images/ExperienceThumbnails/s&d logo.jpeg',
+        image: '/assets/images/ExperienceThumbnails/S&D Logo.jpeg',
         title: 'Management Intern',
         company: 'S&D Kids',
         date: 'May 2023 - August 2023',
