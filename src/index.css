@@ -49,22 +49,22 @@ h2 {
 ::-webkit-scrollbar {
   width: 12px; /* Width of the vertical scrollbar */
   height: 12px; /* Height of the horizontal scrollbar */
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
 /* Track (background of the scrollbar) */
 ::-webkit-scrollbar-track {
-  background-color: black; /* Light gray track */
+  background-color: rgb(119, 119, 119); /* Light gray track */
   border-radius: 10px;
 }
 
 /* Thumb (the draggable part of the scrollbar) */
 ::-webkit-scrollbar-thumb {
   background: white; /* Darker gray */
-  border-radius: 0px;
+  border-radius: 10px;
 }
 
 /* Thumb hover state */
 ::-webkit-scrollbar-thumb:hover {
-  background: #a5a5a5; /* Even darker gray */
+  background: #c7c7c7; /* Even darker gray */
 }

@@ -84,9 +84,9 @@ export default function Sidebar({setAnimationOn, animationOn}) {
 				styling={{marginTop:'20px'}}
 			/> */}
 			<div className={styles.inner}>
-				<Link onClick={() => window.scrollTo(0, 0)} to={'/'} className={`${styles.backToHome} `}> 
+				{/* <Link onClick={() => window.scrollTo(0, 0)} to={'/'} className={`${styles.backToHome} `}> 
 						<FaHouse size={32} fill='#9ec69e'/>
-				</Link>
+				</Link> */}
 				<ul className={`${styles.tabsList} flex flex-row md:flex-col text-center text-[12px] md:text-[18px]`}>
 					<div id='selector' className={styles.tabSelector}></div>
 					{tabs.map((tab, index) => (

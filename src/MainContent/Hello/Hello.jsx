@@ -32,7 +32,7 @@ export default function Hello() {
             </p>
             <div className={`${styles.fadeIn} mt-[40px] flex row gap-10 h-[50px]`}>
                 <ExternalLink 
-                    link={'https://docs.google.com/document/d/1z1h3dr1dLZ7C9cbroHiK3YfwxbnEpoxZsjeQJazPnWQ/edit?usp=drive_link'}
+                    link={'https://drive.google.com/file/d/1UAIq_9aLVVYzpRgZxyxD9IIiBj8Duh-X/view?usp=drive_link'}
                     text={'Resume'}
                     icon={<IoDocumentTextSharp size={20}/>}
                 />
